@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto section-padding">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <h3 className="font-display text-2xl font-bold mb-4">Intério</h3>
+            <h3 className="font-display text-2xl font-bold mb-4">telkis</h3>
             <p className="text-sm opacity-70 leading-relaxed">
               Premium interior design services that transform your space into a reflection of your lifestyle.
             </p>
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-primary-foreground/10 text-center text-sm opacity-50">
-          © {new Date().getFullYear()} Intério. All rights reserved.
+          © {new Date().getFullYear()} telkis. All rights reserved.
         </div>
       </div>
     </footer>
