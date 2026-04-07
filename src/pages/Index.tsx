@@ -13,7 +13,7 @@ const steps = [
 ];
 
 const testimonials = [
-  { name: "Ananya R.", text: "Intério transformed our apartment into a space we're truly proud of. The attention to detail was extraordinary.", rating: 5 },
+  { name: "Ananya R.", text: "telkis transformed our apartment into a space we're truly proud of. The attention to detail was extraordinary.", rating: 5 },
   { name: "Rahul & Meera K.", text: "From the first consultation to the final reveal, the experience was seamless and the results exceeded our expectations.", rating: 5 },
   { name: "Deepak S.", text: "The 3D visualization helped us see exactly what our kitchen would look like. No surprises, just perfection.", rating: 5 },
 ];
