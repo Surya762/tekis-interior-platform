@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Ruler, Palette, CalendarCheck, Star, Home, Building2, Hammer, Phone, Mail } from "lucide-react";
+import { ArrowRight, Ruler, Palette, CalendarCheck, Star, Home, Building2, Hammer, Phone, Mail, TreePine, Layers, Wrench, CloudSun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DesignCard from "@/components/DesignCard";
 import { designs } from "@/data/designs";
@@ -39,19 +39,27 @@ const specialties = [
 
 const brandCategories = [
   {
+    icon: TreePine,
     title: "Plywood",
+    desc: "Premium grade plywood for lasting durability",
     brands: ["Century Ply", "Green Ply", "Vanam Ply", "Royal Touche", "Magnus", "Gurjan", "Saburi"],
   },
   {
+    icon: Layers,
     title: "Laminates / Acrylics / Veneers",
+    desc: "Stunning surface finishes for every taste",
     brands: ["Century", "Green Lams", "Feel Touch", "Vergo", "Royal Touche"],
   },
   {
+    icon: Wrench,
     title: "Hardware & Kitchen Accessories",
+    desc: "Precision-engineered fittings & mechanisms",
     brands: ["Sleek", "Blum", "Ebco", "Nimmi", "Hettitch", "Olive"],
   },
   {
+    icon: CloudSun,
     title: "False Ceiling",
+    desc: "Industry-standard ceiling solutions",
     brands: ["Saint Gobain (Gypsum)", "Tata Prime", "Jindal", "Everest", "Jitex", "Gypcore"],
   },
 ];
@@ -203,7 +211,7 @@ export default function Index() {
       </section>
 
       {/* Brands We Trust */}
-      <section className="bg-cream section-padding">
+      <section className="bg-cream section-padding overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -215,22 +223,37 @@ export default function Index() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Brands We Trust</h2>
             <p className="mt-3 text-muted-foreground max-w-xl mx-auto">We partner with industry-leading brands to ensure durability, aesthetics, and premium quality in every project.</p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {brandCategories.map((cat, i) => (
               <motion.div
                 key={cat.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.12 }}
-                className="bg-background rounded-lg p-6 border border-border"
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="group bg-background rounded-xl p-8 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
               >
-                <h3 className="font-display text-lg font-semibold text-foreground mb-4 pb-3 border-b border-border">{cat.title}</h3>
+                <div className="flex items-start gap-5 mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <cat.icon size={26} className="text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold text-foreground">{cat.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{cat.desc}</p>
+                  </div>
+                </div>
                 <div className="flex flex-wrap gap-2">
-                  {cat.brands.map((brand) => (
-                    <span key={brand} className="text-xs font-medium bg-primary/10 text-primary px-3 py-1.5 rounded-full">
+                  {cat.brands.map((brand, j) => (
+                    <motion.span
+                      key={brand}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 + j * 0.04 }}
+                      className="text-sm font-medium bg-muted text-foreground px-4 py-2 rounded-lg border border-border hover:border-primary/40 hover:bg-primary/5 transition-colors cursor-default"
+                    >
                       {brand}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </motion.div>
