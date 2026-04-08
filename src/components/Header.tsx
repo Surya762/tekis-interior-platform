@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -18,9 +19,12 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/" className="flex flex-col items-start">
-          <span className="font-display text-2xl font-bold tracking-tight text-foreground">TEKI'S</span>
-          <span className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground -mt-1">Interior & Contracts</span>
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logo} alt="TEKI'S Interior & Contracts" className="h-10 w-10 rounded-md object-cover" />
+          <div className="flex flex-col items-start">
+            <span className="font-display text-lg font-bold tracking-tight text-foreground leading-tight">TEKI'S</span>
+            <span className="text-[9px] tracking-[0.2em] uppercase text-muted-foreground">Interior & Contracts</span>
+          </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
