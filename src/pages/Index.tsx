@@ -37,6 +37,25 @@ const specialties = [
   "Elegant White & Aqua Theme Concepts",
 ];
 
+const brandCategories = [
+  {
+    title: "Plywood",
+    brands: ["Century Ply", "Green Ply", "Vanam Ply", "Royal Touche", "Magnus", "Gurjan", "Saburi"],
+  },
+  {
+    title: "Laminates / Acrylics / Veneers",
+    brands: ["Century", "Green Lams", "Feel Touch", "Vergo", "Royal Touche"],
+  },
+  {
+    title: "Hardware & Kitchen Accessories",
+    brands: ["Sleek", "Blum", "Ebco", "Nimmi", "Hettitch", "Olive"],
+  },
+  {
+    title: "False Ceiling",
+    brands: ["Saint Gobain (Gypsum)", "Tata Prime", "Jindal", "Everest", "Jitex", "Gypcore"],
+  },
+];
+
 const testimonials = [
   { name: "Ananya R.", text: "TEKI'S Interior transformed our apartment into a space we're truly proud of. The attention to detail was extraordinary.", rating: 5 },
   { name: "Rahul & Meera K.", text: "From the first consultation to the final reveal, the experience was seamless and the results exceeded our expectations.", rating: 5 },
