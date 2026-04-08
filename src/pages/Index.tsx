@@ -345,6 +345,7 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
               <a href="tel:+916301780982" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 <Phone size={18} /> +91 63017 80982
+                <Phone size={18} /> +91 95050 45084
               </a>
               <a href="mailto:tekisinteriorscontracts@gmail.com" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 <Mail size={18} /> tekisinteriorscontracts@gmail.com
