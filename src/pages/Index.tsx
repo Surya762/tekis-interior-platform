@@ -39,19 +39,27 @@ const specialties = [
 
 const brandCategories = [
   {
+    icon: TreePine,
     title: "Plywood",
+    desc: "Premium grade plywood for lasting durability",
     brands: ["Century Ply", "Green Ply", "Vanam Ply", "Royal Touche", "Magnus", "Gurjan", "Saburi"],
   },
   {
+    icon: Layers,
     title: "Laminates / Acrylics / Veneers",
+    desc: "Stunning surface finishes for every taste",
     brands: ["Century", "Green Lams", "Feel Touch", "Vergo", "Royal Touche"],
   },
   {
+    icon: Wrench,
     title: "Hardware & Kitchen Accessories",
+    desc: "Precision-engineered fittings & mechanisms",
     brands: ["Sleek", "Blum", "Ebco", "Nimmi", "Hettitch", "Olive"],
   },
   {
+    icon: CloudSun,
     title: "False Ceiling",
+    desc: "Industry-standard ceiling solutions",
     brands: ["Saint Gobain (Gypsum)", "Tata Prime", "Jindal", "Everest", "Jitex", "Gypcore"],
   },
 ];
