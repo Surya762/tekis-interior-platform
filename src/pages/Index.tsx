@@ -37,6 +37,25 @@ const specialties = [
   "Elegant White & Aqua Theme Concepts",
 ];
 
+const brandCategories = [
+  {
+    title: "Plywood",
+    brands: ["Century Ply", "Green Ply", "Vanam Ply", "Royal Touche", "Magnus", "Gurjan", "Saburi"],
+  },
+  {
+    title: "Laminates / Acrylics / Veneers",
+    brands: ["Century", "Green Lams", "Feel Touch", "Vergo", "Royal Touche"],
+  },
+  {
+    title: "Hardware & Kitchen Accessories",
+    brands: ["Sleek", "Blum", "Ebco", "Nimmi", "Hettitch", "Olive"],
+  },
+  {
+    title: "False Ceiling",
+    brands: ["Saint Gobain (Gypsum)", "Tata Prime", "Jindal", "Everest", "Jitex", "Gypcore"],
+  },
+];
+
 const testimonials = [
   { name: "Ananya R.", text: "TEKI'S Interior transformed our apartment into a space we're truly proud of. The attention to detail was extraordinary.", rating: 5 },
   { name: "Rahul & Meera K.", text: "From the first consultation to the final reveal, the experience was seamless and the results exceeded our expectations.", rating: 5 },
@@ -180,6 +199,43 @@ export default function Index() {
               <p className="font-display text-base font-semibold text-foreground">{specialty}</p>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Brands We Trust */}
+      <section className="bg-cream section-padding">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-2">Quality Materials</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Brands We Trust</h2>
+            <p className="mt-3 text-muted-foreground max-w-xl mx-auto">We partner with industry-leading brands to ensure durability, aesthetics, and premium quality in every project.</p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {brandCategories.map((cat, i) => (
+              <motion.div
+                key={cat.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12 }}
+                className="bg-background rounded-lg p-6 border border-border"
+              >
+                <h3 className="font-display text-lg font-semibold text-foreground mb-4 pb-3 border-b border-border">{cat.title}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {cat.brands.map((brand) => (
+                    <span key={brand} className="text-xs font-medium bg-primary/10 text-primary px-3 py-1.5 rounded-full">
+                      {brand}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
