@@ -202,6 +202,43 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Brands We Trust */}
+      <section className="bg-cream section-padding">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-2">Quality Materials</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Brands We Trust</h2>
+            <p className="mt-3 text-muted-foreground max-w-xl mx-auto">We partner with industry-leading brands to ensure durability, aesthetics, and premium quality in every project.</p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {brandCategories.map((cat, i) => (
+              <motion.div
+                key={cat.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12 }}
+                className="bg-background rounded-lg p-6 border border-border"
+              >
+                <h3 className="font-display text-lg font-semibold text-foreground mb-4 pb-3 border-b border-border">{cat.title}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {cat.brands.map((brand) => (
+                    <span key={brand} className="text-xs font-medium bg-primary/10 text-primary px-3 py-1.5 rounded-full">
+                      {brand}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section id="how-it-works" className="bg-cream section-padding">
         <div className="max-w-7xl mx-auto">
