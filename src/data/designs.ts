@@ -4,7 +4,7 @@ import living1 from "@/assets/living-1.jpg";
 import office1 from "@/assets/office-1.jpg";
 import bathroom1 from "@/assets/bathroom-1.jpg";
 
-export type DesignCategory = "kitchen" | "bedroom" | "living-room" | "office" | "bathroom";
+export type DesignCategory = "kitchen" | "bedroom" | "living-room" | "office" ;
 export type DesignStyle = "modern" | "minimalist" | "contemporary" | "scandinavian" | "industrial";
 export type BudgetRange = "budget" | "mid-range" | "premium" | "luxury";
 
@@ -28,7 +28,7 @@ export const categoryLabels: Record<DesignCategory, string> = {
   bedroom: "Bedroom",
   "living-room": "Living Room",
   office: "Office",
-  bathroom: "Bathroom",
+  ,
 };
 
 export const styleLabels: Record<DesignStyle, string> = {
@@ -105,20 +105,6 @@ export const designs: Design[] = [
   },
   {
     id: "5",
-    title: "Luxury Marble Bathroom",
-    category: "bathroom",
-    style: "modern",
-    budget: "luxury",
-    costEstimate: "₹22,00,000",
-    image: bathroom1,
-    description: "A luxurious spa-like bathroom with luxury marble and texture finishes, freestanding bathtub, and bronze fixtures that create an everyday retreat.",
-    designer: "TEKI'S Design Team",
-    rating: 5.0,
-    materials: ["Carrara Marble", "Bronze Fixtures", "Teak Accents", "Texture Wall Finish"],
-    size: "100 sq ft",
-  },
-  {
-    id: "6",
     title: "PVC & Laminate Kitchen",
     category: "kitchen",
     style: "contemporary",
@@ -131,4 +117,33 @@ export const designs: Design[] = [
     materials: ["PVC Panels", "Laminate Finish", "Stainless Steel", "Granite Countertop"],
     size: "150 sq ft",
   },
+  {
+    id: "6",
+    title: "Scandinavian Style Bedroom",
+    category: "bedroom",
+    style: "scandinavian",
+    budget: "budget",
+    costEstimate: "₹10,00,000",
+    image: bedroom1,
+    description: "A cozy Scandinavian-inspired bedroom with light wood finishes, soft textiles, and a minimalist design approach. Perfect for those seeking comfort on a budget.",
+    designer: "TEKI'S Design Team",
+    rating: 4.7,
+    materials: ["Light Wood", "Soft Textiles", "Minimalist Furniture"],
+    size: "200 sq ft",
+  }
+  {
+    id: "7",
+    title: "Industrial Chic Living Room",
+    category: "living-room",  
+    style: "industrial",
+    budget: "luxury",
+    costEstimate: "₹25,00,000",
+    image: living1,
+    description: "An industrial chic living room with exposed brick walls, metal accents, and a blend of vintage and modern furniture. Designed for those who appreciate bold aesthetics.",
+    designer: "TEKI'S Design Team",
+    rating: 4.8,
+    materials: ["Exposed Brick", "Metal Accents", "Vintage Furniture"],
+    size: "400 sq ft",
+  },
+  
 ];
