@@ -9,7 +9,7 @@ const fadeUp = {
 const milestones = [
   { year: "Founded", desc: "TEKI'S Interior & Contracts established with a vision for quality craftsmanship" },
   { year: "Growth", desc: "Expanded services to commercial interiors, offices & retail spaces" },
-  { year: "500+", desc: "Successfully completed over 500 residential & commercial projects" },
+  { year: "20+", desc: "Successfully completed over 20 residential & commercial projects" },
   { year: "Today", desc: "One of the most trusted interior brands in the region" },
 ];
 
@@ -136,12 +136,12 @@ export default function About() {
             </p>
             <div className="flex items-center justify-center gap-6 mt-8 pt-6 border-t border-border">
               <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">500+</p>
+                <p className="text-2xl font-bold text-foreground">20+</p>
                 <p className="text-xs text-muted-foreground">Projects Delivered</p>
               </div>
               <div className="w-px h-10 bg-border" />
               <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">10+</p>
+                <p className="text-2xl font-bold text-foreground">2+</p>
                 <p className="text-xs text-muted-foreground">Years Experience</p>
               </div>
               <div className="w-px h-10 bg-border" />
