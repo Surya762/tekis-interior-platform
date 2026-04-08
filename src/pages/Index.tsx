@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Ruler, Palette, CalendarCheck, Star, Home, Building2, Hammer, Phone, Mail } from "lucide-react";
+import { ArrowRight, Ruler, Palette, CalendarCheck, Star, Home, Building2, Hammer, Phone, Mail, TreePine, Layers, Wrench, CloudSun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DesignCard from "@/components/DesignCard";
 import { designs } from "@/data/designs";
