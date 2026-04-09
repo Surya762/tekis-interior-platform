@@ -2,7 +2,7 @@ import kitchen1 from "@/assets/kitchen-1.jpg";
 import bedroom1 from "@/assets/bedroom-1.jpg";
 import living1 from "@/assets/living-1.jpg";
 import office1 from "@/assets/office-1.jpg";
-import bathroom1 from "@/assets/bathroom-1.jpg";
+
 
 export type DesignCategory = "kitchen" | "bedroom" | "living-room" | "office" ;
 export type DesignStyle = "modern" | "minimalist" | "contemporary" | "scandinavian" | "industrial";
