@@ -20,7 +20,7 @@ export default function Designs() {
     });
   }, [category, style, budget]);
 
-  const categories: Array<DesignCategory | "all"> = ["all", "kitchen", "bedroom", "living-room", "office", "bathroom"];
+  const categories: Array<DesignCategory | "all"> = ["all", "kitchen", "bedroom", "living-room", "office"];
 
   return (
     <div className="min-h-screen pt-24">

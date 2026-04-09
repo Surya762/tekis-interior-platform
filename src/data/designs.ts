@@ -28,7 +28,6 @@ export const categoryLabels: Record<DesignCategory, string> = {
   bedroom: "Bedroom",
   "living-room": "Living Room",
   office: "Office",
-  ,
 };
 
 export const styleLabels: Record<DesignStyle, string> = {
@@ -130,7 +129,7 @@ export const designs: Design[] = [
     rating: 4.7,
     materials: ["Light Wood", "Soft Textiles", "Minimalist Furniture"],
     size: "200 sq ft",
-  }
+  },
   {
     id: "7",
     title: "Industrial Chic Living Room",
