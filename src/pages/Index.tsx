@@ -355,7 +355,7 @@ export default function Index() {
               </a>
             </div>
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-              <Link to="/designs">
+              <Link to="contact">
                 Get Started <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>

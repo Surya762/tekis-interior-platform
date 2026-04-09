@@ -10,6 +10,7 @@ import Designs from "./pages/Designs";
 import DesignDetail from "./pages/DesignDetail";
 import About from "./pages/About";
 import BudgetCalculator from "./pages/BudgetCalculator";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/designs/:id" element={<DesignDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/budget-calculator" element={<BudgetCalculator />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

@@ -10,8 +10,8 @@ const navLinks = [
   { label: "Designs", path: "/designs" },
   { label: "About", path: "/about" },
   { label: "Budget Calculator", path: "/budget-calculator" },
-  { label: "Services", path: "/#services" },
-  { label: "Contact", path: "/#contact" },
+  { label: "Services", path: "/services" },
+  { label: "Contact", path: "/contact" },
 ];
 
 export default function Header() {
