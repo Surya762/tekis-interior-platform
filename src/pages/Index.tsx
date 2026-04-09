@@ -104,8 +104,10 @@ export default function Index() {
                   Explore Designs <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm" asChild>
-                <Link to="/#services">Our Services</Link>
+              <Button size="lg" asChild>
+                <Link to="/budget-calculator">
+                  Calculate Budget <ArrowRight className="ml-2" size={18} />
+                </Link>
               </Button>
             </div>
           </motion.div>
