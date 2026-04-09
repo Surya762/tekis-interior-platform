@@ -14,9 +14,9 @@ import {
 import { Calculator, Home, IndianRupee } from "lucide-react";
 
 const bhkDefaults: Record<string, number[]> = {
-  "1": [40, 40, 15, 10, 15, 15, 10, 20],
-  "2": [60, 80, 25, 15, 20, 25, 15, 30],
-  "3": [80, 120, 30, 20, 30, 40, 20, 40],
+  "1": [0, 0, 0, 0, 0, 0, 0, 0],
+  "2": [0, 0, 0, 0, 0, 0, 0, 0],
+  "3": [0, 0, 0, 0, 0, 0, 0, 0],
 };
 
 const pricing: Record<string, { min: number; max: number }> = {
@@ -27,7 +27,9 @@ const pricing: Record<string, { min: number; max: number }> = {
 
 const areaFields = [
   { key: "kitchen", label: "Kitchen" },
-  { key: "wardrobe", label: "Wardrobes" },
+  { key: "master bedroom", label: "Master Bedroom" },
+  { key: "Children Bedroom", label: "Children Bedroom" },
+  { key: "Guest Room", label: "Guest Room" },
   { key: "tv", label: "TV Unit" },
   { key: "pooja", label: "Pooja Unit" },
   { key: "crockery", label: "Crockery Unit" },
@@ -119,9 +121,10 @@ export default function BudgetCalculator() {
                     <SelectItem value="1">1 BHK</SelectItem>
                     <SelectItem value="2">2 BHK</SelectItem>
                     <SelectItem value="3">3 BHK</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+                    <SelectItem value="villa">Villa / Custom</SelectItem>
+                    </SelectContent>
+                    </Select>
+                   </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground flex items-center gap-2">
