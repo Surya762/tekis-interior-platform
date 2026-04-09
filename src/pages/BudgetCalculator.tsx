@@ -20,9 +20,9 @@ const bhkDefaults: Record<string, number[]> = {
 };
 
 const pricing: Record<string, { min: number; max: number }> = {
-  basic: { min: 1200, max: 1600 },
-  premium: { min: 1800, max: 2500 },
-  luxury: { min: 2800, max: 4500 },
+  basic: { min: 950, max: 1400 },
+  premium: { min: 1600, max: 2200 },
+  luxury: { min: 2400, max: 4000 },
 };
 
 const areaFields = [
@@ -62,7 +62,7 @@ export default function BudgetCalculator() {
   };
 
   const handleAreaChange = (key: AreaKey, value: string) => {
-    setAreas((prev) => ({ ...prev, [key]: Number(value) || 0 }));
+    setAreas((prev) => ({ ...prev, [key]: Number(value) ||  }));
     setShowResult(true);
   };
 
@@ -159,7 +159,7 @@ export default function BudgetCalculator() {
                       min={0}
                       value={areas[field.key] || ""}
                       onChange={(e) => handleAreaChange(field.key, e.target.value)}
-                      placeholder="0"
+                      placeholder=" "
                     />
                   </div>
                 ))}
