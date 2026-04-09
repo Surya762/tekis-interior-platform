@@ -47,6 +47,10 @@ export default function BudgetCalculator() {
     Object.fromEntries(areaFields.map((f) => [f.key, 0])) as Record<AreaKey, number>
   );
   const [showResult, setShowResult] = useState(false);
+// This state tracks which areas are included based on BHK selection, but currently all are editable. You can enhance this logic to disable/hide fields based on defaults.
+  const [includedAreas, setIncludedAreas] = useState<Record<AreaKey, boolean>>(
+  Object.fromEntries(areaFields.map((f) => [f.key, false])) as Record<AreaKey, boolean>
+);
 
   const handleBhkChange = (value: string) => {
     setBhk(value);
@@ -62,14 +66,24 @@ export default function BudgetCalculator() {
   };
 
   const handleAreaChange = (key: AreaKey, value: string) => {
-    setAreas((prev) => ({ ...prev, [key]: Number(value) ||  }));
+    setAreas((prev) => ({ ...prev, [key]: Number(value) || 0 }));
     setShowResult(true);
   };
 
   const totalSqft = useMemo(
-    () => Object.values(areas).reduce((sum, v) => sum + v, 0),
-    [areas]
-  );
+  () =>
+    Object.entries(areas).reduce((sum, [key, value]) => {
+      const isIncluded = includedAreas[key as AreaKey];
+      const areaValue = Number(value) || 0;
+
+      // skip if user didn't select OR value is 0
+      if (!isIncluded || areaValue === 0) return sum;
+
+      return sum + areaValue;
+    }, 0),
+  [areas, includedAreas]
+);
+  
 
   const estimate = useMemo(() => {
     const p = pricing[pkg];
@@ -150,22 +164,44 @@ export default function BudgetCalculator() {
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {areaFields.map((field) => (
-                  <div key={field.key} className="space-y-1.5">
-                    <label className="text-xs font-medium text-muted-foreground">
-                      {field.label}
-                    </label>
-                    <Input
-                      type="number"
-                      min={0}
-                      value={areas[field.key] || ""}
-                      onChange={(e) => handleAreaChange(field.key, e.target.value)}
-                      placeholder=" "
-                    />
-                  </div>
-                ))}
+                <div key={field.key} className="space-y-1.5">
+
+               {/* Label + Checkbox */}
+              <div className="flex items-center justify-between">
+              <label className="text-xs font-medium text-muted-foreground">
+              {field.label}
+              </label>
+
+                <input
+                 type="checkbox"
+                checked={includedAreas[field.key]}
+                onChange={(e) =>
+                setIncludedAreas((prev) => ({
+                 ...prev,
+                 [field.key]: e.target.checked,
+            }))
+        }
+      />
+    </div>
+
+    {/* Input Field */}
+    <Input
+      type="number"
+      min={0}
+      disabled={!includedAreas[field.key]} // 🚀 key feature
+      value={areas[field.key] || ""}
+      onChange={(e) => handleAreaChange(field.key, e.target.value)}
+      placeholder="Enter area"
+    />
+  </div>
+))}
               </div>
-              <p className="text-sm text-muted-foreground mt-3">
-                Total Area: <span className="font-semibold text-foreground">{totalSqft} sq.ft</span>
+              <div className="mt-3 text-center">
+              <p className="text-sm text-muted-foreground">
+               Total Area: <span className="font-semibold text-foreground">{totalSqft} sq.ft</span>
+              </p>
+              <p className="text-xs text-muted-foreground mt-1">
+               Select only the areas you want (unchecked sections are excluded)
               </p>
             </div>
 
