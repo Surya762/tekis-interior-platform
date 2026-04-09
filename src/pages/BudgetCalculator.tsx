@@ -63,7 +63,7 @@ export default function BudgetCalculator() {
 
   const handleAreaChange = (key: AreaKey, value: string) => {
     setAreas((prev) => ({ ...prev, [key]: Number(value) || 0 }));
-    setShowResult(false);
+    setShowResult(true);
   };
 
   const totalSqft = useMemo(
