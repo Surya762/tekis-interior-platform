@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Eye, Heart, Award, Users, Clock, Building2, Star } from "lucide-react";
+import rajivPhoto from "@/assets/rajiv.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -119,8 +120,8 @@ export default function About() {
           >
             <div className="w-28 h-28 rounded-full bg-primary/10 border-4 border-primary/20 flex items-center justify-center mx-auto mb-6 overflow-hidden">
               <img
-               src="./rajiv-teki.jpg" 
-               alt="Profile" 
+                src={rajivPhoto} 
+                alt="Rajiv Teki - Managing Director" 
                className="w-full h-full object-cover"
                />
             </div>
