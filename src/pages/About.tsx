@@ -117,8 +117,12 @@ export default function About() {
             custom={1}
             className="max-w-3xl mx-auto bg-background border border-border rounded-2xl p-8 md:p-12 text-center"
           >
-            <div className="w-28 h-28 rounded-full bg-primary/10 border-4 border-primary/20 flex items-center justify-center mx-auto mb-6">
-              <span className="text-4xl font-display font-bold text-primary">RT</span>
+            <div className="w-28 h-28 rounded-full bg-primary/10 border-4 border-primary/20 flex items-center justify-center mx-auto mb-6 overflow-hidden">
+              <img
+               src="./rajiv-teki.jpg" 
+               alt="Profile" 
+               className="w-full h-full object-cover"
+               />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Rajiv Teki</h3>
             <p className="text-primary font-medium mb-6">Managing Director & Founder</p>

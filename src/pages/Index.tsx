@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import DesignCard from "@/components/DesignCard";
 import { designs } from "@/data/designs";
 import heroImage from "@/assets/hero-living.jpg";
+import BudgetCalculator from "@/components/BudgetCalculator";
 
 const steps = [
   { icon: Palette, title: "Explore Designs", desc: "Browse our portfolio of modular kitchens, commercial interiors, and residential projects." },
