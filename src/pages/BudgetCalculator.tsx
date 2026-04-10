@@ -203,6 +203,7 @@ export default function BudgetCalculator() {
               <p className="text-xs text-muted-foreground mt-1">
                Select only the areas you want (unchecked sections are excluded)
               </p>
+             </div>
             </div>
 
             <Button

@@ -283,6 +283,6 @@ export default function Contact() {
 
         </div>
       </main>
-
+    </div>
   );
 }
