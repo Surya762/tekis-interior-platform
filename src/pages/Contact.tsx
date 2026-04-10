@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const WHATSAPP_NUMBER = "916301780982";
 const WHATSAPP_MESSAGE = encodeURIComponent(
@@ -27,6 +29,18 @@ const defaultForm: FormData = {
 };
 
 export default function Contact() {
+
+  const location = useLocation();
+  useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const shouldOpenWhatsApp = params.get("whatsapp");
+
+  if (shouldOpenWhatsApp === "true") {
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20I%20want%20to%20book%20a%20consultation`;
+    window.open(url, "_blank");
+  }
+}, [location]);
+
   const [form, setForm] = useState<FormData>(defaultForm);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
