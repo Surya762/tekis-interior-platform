@@ -122,7 +122,7 @@ export default function About() {
               <img
                 src={rajivPhoto} 
                 alt="Rajiv Teki - Managing Director" 
-               className="w-full h-full object-cover"
+               className="w-full h-full object-cover object-[center_20%]"
                />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">Rajiv Teki</h3>

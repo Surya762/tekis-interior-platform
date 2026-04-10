@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import Contact from "@/pages/Contact";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -45,10 +46,7 @@ export default function Header() {
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="ghost" size="sm" className="text-muted-foreground" asChild>
-            <Link to="/login">Log In</Link>
-          </Button>
-          <Button size="sm" asChild>
-            <Link to="/designs">Book Consultation</Link>
+          <Link to="/designs">Book Consultation</Link>
           </Button>
         </div>
 
