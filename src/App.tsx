@@ -10,6 +10,7 @@ import Designs from "./pages/Designs";
 import DesignDetail from "./pages/DesignDetail";
 import About from "./pages/About";
 import BudgetCalculator from "./pages/BudgetCalculator";
+import services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/budget-calculator" element={<BudgetCalculator />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<services />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
