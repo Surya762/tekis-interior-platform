@@ -2,10 +2,25 @@ import kitchen1 from "@/assets/kitchen-1.jpg";
 import bedroom1 from "@/assets/bedroom-1.jpg";
 import living1 from "@/assets/living-1.jpg";
 import office1 from "@/assets/office-1.jpg";
+import kitchen2 from "@/assets/kitchen-2.jpg.jpeg";
+import kitchen3 from "@/assets/kitchen-3.jpg.jpeg";
+import kitchen4 from "@/assets/kitchen-4.jpeg";
+import kitchen5 from "@/assets/kitchen-5.jpg";
+import bedroom2 from "@/assets/bedroom-2.jpg";
+import bedroom3 from "@/assets/bedroom-3.jpg";
+import bedroom4 from "@/assets/bedroom-4.jpg";
+import bedroom5 from "@/assets/bedroom-5.jpg";
+import living room2 from "@/assets/livingroom-2.jpg";
+import livingroom3 from  "@/assets/livingroom-1.jpg";
+import livingroom4 from "@/assets/livingroom-4.jpg";
+import livingroom5 from "@/assets/livingroom-5.jpg";
+import livingroom6 from "@/assets/livingroom-6.jpg";
+import livingroom7 from "@/assets/livingroom-7.jpg";
+import livingroom8 from "@/assets/livingroom-8.jpg";
 
 
 export type DesignCategory = "kitchen" | "bedroom" | "living-room" | "office" ;
-export type DesignStyle = "modern" | "minimalist" | "contemporary" | "scandinavian" | "industrial";
+export type DesignStyle = "modern" | "minimalist" ;
 export type BudgetRange = "budget" | "mid-range" | "premium" | "luxury";
 
 export interface Design {
@@ -20,8 +35,7 @@ export interface Design {
   designer: string;
   rating: number;
   materials: string[];
-  size: string;
-}
+  }
 
 export const categoryLabels: Record<DesignCategory, string> = {
   kitchen: "Kitchen",
@@ -33,10 +47,7 @@ export const categoryLabels: Record<DesignCategory, string> = {
 export const styleLabels: Record<DesignStyle, string> = {
   modern: "Modern",
   minimalist: "Minimalist",
-  contemporary: "Contemporary",
-  scandinavian: "Scandinavian",
-  industrial: "Industrial",
-};
+  };
 
 export const budgetLabels: Record<BudgetRange, string> = {
   budget: "Under ₹5L",
@@ -58,7 +69,7 @@ export const designs: Design[] = [
     designer: "TEKI'S Design Team",
     rating: 4.9,
     materials: ["Acrylic Panels", "Marine Plywood", "Soft-close Hardware", "Quartz Countertop"],
-    size: "180 sq ft",
+    
   },
   {
     id: "2",
@@ -72,13 +83,13 @@ export const designs: Design[] = [
     designer: "TEKI'S Design Team",
     rating: 4.8,
     materials: ["PVC Laminate", "Gypsum Ceiling", "Texture Paint", "Oak Wood"],
-    size: "220 sq ft",
+    
   },
   {
     id: "3",
     title: "Premium Living Room Interior",
     category: "living-room",
-    style: "contemporary",
+    style: "minimalist",
     budget: "premium",
     costEstimate: "₹2,50,000",
     image: living1,
@@ -86,7 +97,7 @@ export const designs: Design[] = [
     designer: "TEKI'S Design Team",
     rating: 4.7,
     materials: ["Natural Stone", "Walnut Veneer", "LED False Ceiling", "Italian Marble"],
-    size: "350 sq ft",
+    
   },
   {
     id: "4",
@@ -100,13 +111,13 @@ export const designs: Design[] = [
     designer: "TEKI'S Design Team",
     rating: 4.6,
     materials: ["Laminate Panels", "Modular Furniture", "Glass Partitions", "LED Lighting"],
-    size: "120 sq ft",
+    
   },
   {
     id: "5",
     title: "PVC & Laminate Kitchen",
     category: "kitchen",
-    style: "contemporary",
+    style: "modern",
     budget: "mid-range",
     costEstimate: "₹8,50,000",
     image: kitchen1,
@@ -114,13 +125,13 @@ export const designs: Design[] = [
     designer: "TEKI'S Design Team",
     rating: 4.9,
     materials: ["PVC Panels", "Laminate Finish", "Stainless Steel", "Granite Countertop"],
-    size: "150 sq ft",
+    ,
   },
   {
     id: "6",
     title: "Scandinavian Style Bedroom",
     category: "bedroom",
-    style: "scandinavian",
+    style: "minimalist",
     budget: "budget",
     costEstimate: "₹1,00,000",
     image: bedroom1,
@@ -128,21 +139,229 @@ export const designs: Design[] = [
     designer: "TEKI'S Design Team",
     rating: 4.7,
     materials: ["Light Wood", "Soft Textiles", "Minimalist Furniture"],
-    size: "200 sq ft",
+    ,
   },
   {
     id: "7",
     title: "Industrial Chic Living Room",
     category: "living-room",  
-    style: "industrial",
+    style: "modern",
     budget: "luxury",
     costEstimate: "₹3,00,000",
-    image: living1,
+    image: livingroom5,
     description: "An industrial chic living room with exposed brick walls, metal accents, and a blend of vintage and modern furniture. Designed for those who appreciate bold aesthetics.",
     designer: "TEKI'S Design Team",
     rating: 4.8,
-    materials: ["Exposed Brick", "Metal Accents", "Vintage Furniture"],
-    size: "400 sq ft",
+    materials: ["Exposed Brick", "Metal Accents", "Vintage Furniture"]
   },
+  {
+    id: "8",
+    title: "kitchen with Quartz Countertops",
+    category: "kitchen",
+    style: "modern",
+    budget: "luxury",
+    costEstimate: "₹5,00,000",
+    image:kitchen2.jpg.jpeg ,
+  },
+  {
+    id: "9",
+    title: "Minimalist bedroom with Floating Ceiling",
+    category: "bedroom",
+    style: "minimalist",
+    budget: "premium",
+    costEstimate: "₹1,50,000",
+    image: bedroom1,
+    description: "A serene minimalist bedroom with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered sleeping environment.",
+    designer: "TEKI'S Design Team",
+    rating: 4.6,
+    materials: ["Gypsum Ceiling", "Texture Paint", "Oak Wood"],
+    
+  },
+  {
+    id: "10",
+    title: "kitchen with Quartz Countertops",
+    category: "kitchen",
+    style: "modern",
+    budget: "luxury",
+    costEstimate: "₹5,00,000",
+    image: kitchen2.jpg.jpeg,
+  },
+  {
+    id: "11",
+    title: "Contemporary Office Space",
+    category: "office",
+    style: "modern",
+    budget: "premium",
+    costEstimate: "₹4,50,000",
+    image: office1,
+    description: "A contemporary office space designed for productivity and style, featuring built-in storage and modern finishes by our experienced team.",
+    designer: "TEKI'S Design Team",
+    rating: 4.6,
+    materials: ["Laminate Panels", "Modular Furniture", "Glass Partitions", "LED Lighting"],
+    
+  },
+  {
+    id: "12",
+    title: "kitchen with Quartz Countertops",
+    category: "kitchen",
+    style: "minimalist",
+    budget: "premium",
+    costEstimate: "₹5,00,000",
+    image: kitchen3.jpg.jpeg,
+  },
+  {
+    id: "13",
+    title: "Minimalist kitchen with Quartz Countertops",
+    category: "kitchen",
+    style: "minimalist",
+    budget: "luxury",
+    costEstimate: "₹5,00,000",
+    image: kitchen4.jpg.jpeg,
   
+  },
+  {
+    id: "14",
+    title: "Minimalist kitchen with Quartz Countertops",
+    category: "kitchen",
+    style: "minimalist",
+    budget: "mid-range",
+    costEstimate: "₹5,00,000",
+    image: kitchen5.jpeg,
+  },
+  {
+    id: "15",
+    title: "Luxury Kitchen with Granite Countertops",
+    category: "kitchen",
+    style: "modern",
+    budget: "luxury",
+    costEstimate: "₹5,00,000",
+    image: kitchen5.jpg.jpeg,
+  
+  },
+  {
+    id: "16",
+    title: "Minimalist bedroom with Floating Ceiling",
+    category: "bedroom",
+    style: "minimalist",
+    budget: "luxury",
+    costEstimate: "₹1,50,000",
+    image:bedroom2.jpg, ,
+    description: "A serene minimalist bedroom with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered sleeping environment.",
+    designer: "TEKI'S Design Team",
+    rating: 4.6,
+    materials: ["Gypsum Ceiling", "Texture Paint", "Oak Wood"],
+    size: "220 sq ft",
+  },
+  {
+    id: "17",
+    title: "modern bedroom with Floating Ceiling",
+    category: "bedroom",
+    style: "modern",
+    budget: "mid-range",
+    costEstimate: "₹1,50,000",
+    image: bedroom3.jpg,
+    description: "A serene minimalist bedroom with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered sleeping environment.",
+  },
+  {
+    id: "18",
+    title: "modern bedroom with Floating Ceiling",
+    category: "bedroom",
+    style: "modern",
+    budget: "premium",
+    costEstimate: "₹1,50,000",
+    image: bedroom5.jpg,
+    description: "A serene minimalist bedroom with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered sleeping environment.",
+  },  
+{
+    id: "19",
+    title: "modern bedroom with Floating Ceiling",
+    category: "bedroom",
+    style: "modern",
+    budget: "luxury",
+    costEstimate: "₹1,50,000",
+    image: bedroom6.jpg,
+    description: "A serene modern bedroom with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered sleeping environment.",
+  },
+  {
+    id: "20",
+    title: "modern bedroom with Floating Ceiling",
+    category: "bedroom",
+    style: "modern",
+    budget: "budget",
+    costEstimate: "₹1,50,000",
+    image: bedroom4.jpg,
+    description: "A serene modern bedroom with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered sleeping environment.",
+  },
+  {
+    id: "21",
+    title: "modern bedroom with Floating Ceiling",
+    category: "bedroom",  
+    style: "modern",
+    budget: "mid-range",
+    costEstimate: "₹1,50,000",
+    image: bedroom3.jpg,
+    description: "A serene modern bedroom with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered sleeping environment.",
+  },
+  {
+    id: "22",
+    title: "living room with Floating Ceiling",
+    category: "living room",
+    style: "modern",
+    budget: "premium",
+    costEstimate: "₹1,50,000",
+    image: livingroom6.jpg,
+    description: "A serene modern living room with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered relaxation environment.",
+  },
+  {
+    id: "23",
+    title: "living room with Floating Ceiling",
+    category: "living room",  
+    style: "minimalist",
+    budget: "luxury",
+    costEstimate: "₹1,50,000",
+    image: livingroom4.jpg,
+    description: "A serene minimalist living room with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered relaxation environment.",
+  },
+  {
+    id: "24",
+    title: "living room with Floating Ceiling",
+    category: "living room",
+    style: "modern",
+    budget: "mid-range",
+    costEstimate: "₹1,50,000",
+    image: livingroom3.jpg,
+    description: "A serene modern living room with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered relaxation environment.",
+  },
+  {
+    id: "25",
+    title: "living room with Floating Ceiling",
+    category: "living room",
+    style: "minimalist",
+    budget: "budget",
+    costEstimate: "₹1,50,000",
+    image: livingroom2.jpg,
+    description: "A serene minimalist living room with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered relaxation environment.",
+  },
+  {
+    id: "26",
+    title: "living room with Floating Ceiling",
+    category: "living room",  
+      style: "modern",
+    budget: "budget",
+    costEstimate: "₹2,50,000",
+    image: livingroom8.jpg,
+    description: "A serene modern living room with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered relaxation environment.",
+  },
+  {
+    id: "27",
+    title: "living room with Floating Ceiling",
+    category: "living room",
+    style: "minimalist",
+    budget: "mid-range",
+    costEstimate: "₹2,50,000",
+    image: livingroom7.jpg,
+    description: "A serene minimalist living room with a floating ceiling, clean lines, and a neutral color palette. Designed for a peaceful and uncluttered relaxation environment.",
+
+  }
+
 ];
