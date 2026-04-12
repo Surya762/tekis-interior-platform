@@ -1,8 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
  
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -127,7 +125,7 @@ Please share more details and guide me further. Thank you!`;
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Header />
+      
       <main className="flex-1 pt-24 pb-16">
         <div className="container max-w-4xl mx-auto px-4">
 
@@ -239,7 +237,7 @@ Please share more details and guide me further. Thank you!`;
           </div>
         </div>
       </main>
-      <Footer />
+      
     </div>
   );
 }
