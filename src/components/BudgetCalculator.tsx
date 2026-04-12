@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom"; 
+ 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -42,7 +42,7 @@ const areaFields = [
 type AreaKey = (typeof areaFields)[number]["key"];
 
 export default function BudgetCalculator() {
-  const navigate = useNavigate(); 
+   
 
   const [bhk, setBhk] = useState("");
   const [pkg, setPkg] = useState("basic");
@@ -234,7 +234,7 @@ Please share more details and guide me further. Thank you!`;
               disabled={totalSqft === 0}
             >
               <Calculator className="w-4 h-4 mr-2" />
-              Get Quote
+              Get Estimate on WhatsApp
             </Button>
           </div>
         </div>
