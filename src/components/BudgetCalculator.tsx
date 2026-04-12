@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom"; 
+ 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -42,7 +42,7 @@ const areaFields = [
 type AreaKey = (typeof areaFields)[number]["key"];
 
 export default function BudgetCalculator() {
-  const navigate = useNavigate(); 
+   
 
   const [bhk, setBhk] = useState("");
   const [pkg, setPkg] = useState("basic");
@@ -93,30 +93,36 @@ export default function BudgetCalculator() {
     };
   }, [totalSqft, pkg]);
 
-  // ✅ MAIN FUNCTION (WhatsApp + Redirect)
   const handleEstimateClick = () => {
     if (totalSqft === 0) return;
 
-    const message = `Hi, I want interior design estimate.
+    const selectedAreas = areaFields
+      .filter((f) => includedAreas[f.key] && (areas[f.key] || 0) > 0)
+      .map((f) => `• ${f.label}: ${areas[f.key]} sq.ft`)
+      .join("\n");
 
-BHK: ${bhk}
-Package: ${pkg}
-Total Area: ${totalSqft} sq.ft
-Estimated Budget: ₹${estimate.min.toLocaleString("en-IN")} - ₹${estimate.max.toLocaleString("en-IN")}
-`;
+    const message = `Hi Tekis Interiors! 🏠
 
-    const phoneNumber = "916301780982"; // 🔴 REPLACE WITH YOUR NUMBER
+I'd like an interior design estimate:
 
-    // Open WhatsApp
+*Home Type:* ${bhk} BHK
+*Package:* ${pkg.charAt(0).toUpperCase() + pkg.slice(1)}
+
+*Selected Areas:*
+${selectedAreas}
+
+*Total Area:* ${totalSqft} sq.ft
+
+💰 *Estimated Budget:*
+₹${estimate.min.toLocaleString("en-IN")} – ₹${estimate.max.toLocaleString("en-IN")}
+
+Please share more details and guide me further. Thank you!`;
+
+    const phoneNumber = "916301780982";
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
       "_blank"
     );
-
-    // Redirect after slight delay
-    setTimeout(() => {
-      navigate("/contact");
-    }, 800);
   };
 
   return (
@@ -228,7 +234,7 @@ Estimated Budget: ₹${estimate.min.toLocaleString("en-IN")} - ₹${estimate.max
               disabled={totalSqft === 0}
             >
               <Calculator className="w-4 h-4 mr-2" />
-              Get Quote
+              Get Estimate on WhatsApp
             </Button>
           </div>
         </div>
