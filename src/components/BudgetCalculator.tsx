@@ -125,7 +125,7 @@ Please share more details and guide me further. Thank you!`;
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Header />
+      
       <main className="flex-1 pt-24 pb-16">
         <div className="container max-w-4xl mx-auto px-4">
 
@@ -237,7 +237,7 @@ Please share more details and guide me further. Thank you!`;
           </div>
         </div>
       </main>
-      <Footer />
+      
     </div>
   );
 }
