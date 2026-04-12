@@ -79,7 +79,7 @@ export default function Header() {
                 </Link>
               ))}
               <Button size="sm" className="mt-2" asChild>
-                <Link to="/contact?whatsapp=true">Book Consultation</Link>"
+                <Link to="/contact" onClick={() => setMobileOpen(false)}>Book Consultation</Link>
               </Button>
             </div>
           </motion.div>
