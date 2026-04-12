@@ -46,7 +46,7 @@ export default function Header() {
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="ghost" size="sm" className="text-muted-foreground" asChild>
-          <Link to="/designs">Book Consultation</Link>
+          <Link to="/contact">Book Consultation</Link>
           </Button>
         </div>
 
@@ -79,7 +79,7 @@ export default function Header() {
                 </Link>
               ))}
               <Button size="sm" className="mt-2" asChild>
-                <Link to="/designs" onClick={() => setMobileOpen(false)}>Book Consultation</Link>
+                <Link to="/contact?whatsapp=true">Book Consultation</Link>"
               </Button>
             </div>
           </motion.div>
