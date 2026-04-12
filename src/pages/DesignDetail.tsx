@@ -72,9 +72,9 @@ export default function DesignDetail() {
               </div>
               <div className="bg-card rounded-lg p-5 border border-border">
                 <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                  <Ruler size={16} /> <span className="text-sm">Room Size</span>
+                  <Ruler size={16} /> <span className="text-sm">Category</span>
                 </div>
-                <p className="font-display text-xl font-bold text-foreground">{design.size}</p>
+                <p className="font-display text-xl font-bold text-foreground capitalize">{design.category}</p>
               </div>
             </div>
 
