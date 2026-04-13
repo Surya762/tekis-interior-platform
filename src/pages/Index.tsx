@@ -66,9 +66,13 @@ const brandCategories = [
 ];
 
 const testimonials = [
-  { name: "Ananya R.", text: "TEKI'S Interior transformed our apartment into a space we're truly proud of. The attention to detail was extraordinary.", rating: 5 },
-  { name: "Rahul & Meera K.", text: "From the first consultation to the final reveal, the experience was seamless and the results exceeded our expectations.", rating: 5 },
-  { name: "Deepak S.", text: "The 3D visualization helped us see exactly what our kitchen would look like. No surprises, just perfection.", rating: 5 },
+  { name: "Happy Customer", text: "Very Good with Interiors... planning & execution was very professional.. & quite budgeted Plans.. a big kudos to Teki Interior Contracts Team!", rating: 5 },
+  { name: "Satisfied Homeowner", text: "A big thanks to the Teki's interior team for the amazing work on our home! Everything was designed perfectly as per our needs. The finish and creativity are excellent. Highly satisfied!", rating: 5 },
+  { name: "Creative Client", text: "They perfectly understood my requirements and turned my vision into reality with creative and practical designs.", rating: 5 },
+  { name: "Delighted Customer", text: "The interior design work was excellent, elegant finish. The team understood my requirements perfectly and delivered beyond expectations. Highly satisfied with the overall outcome.", rating: 5 },
+  { name: "Grateful Client", text: "So much obliged and thankful to the whole Tekis Contracts team. Very good Designs and the staff are very friendly and their detailing was very professional. Mainly thankful to Director Mr. Teki Rajiv garu, who is a very humble person.", rating: 5 },
+  { name: "Happy Family", text: "Really it's amazing... Teki's interior designers are doing their best with very comfortable, affordable and very reasonable prices compared to other contractors. Felt very happy to be a fully satisfied customer!", rating: 5 },
+  { name: "Modern Home Owner", text: "A beautifully designed modern bedroom that perfectly blends elegance, comfort, and functionality with smart space utilization. We are fully satisfied with Teki's Interiors and Contracts.", rating: 5 },
 ];
 
 export default function Index() {
@@ -309,23 +313,23 @@ export default function Index() {
           <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-2">Client Love</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">What Our Clients Say</h2>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card rounded-lg p-8 border border-border"
+              transition={{ delay: i * 0.08 }}
+              className="bg-card rounded-lg p-6 border border-border"
             >
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-3">
                 {Array.from({ length: t.rating }).map((_, j) => (
-                  <Star key={j} size={16} className="fill-primary text-primary" />
+                  <Star key={j} size={14} className="fill-primary text-primary" />
                 ))}
               </div>
-              <p className="text-foreground leading-relaxed mb-6">"{t.text}"</p>
-              <p className="text-sm font-semibold text-foreground">{t.name}</p>
+              <p className="text-foreground text-sm leading-relaxed mb-4">"{t.text}"</p>
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">{t.name}</p>
             </motion.div>
           ))}
         </div>
