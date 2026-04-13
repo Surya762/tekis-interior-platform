@@ -313,23 +313,23 @@ export default function Index() {
           <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-2">Client Love</p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">What Our Clients Say</h2>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card rounded-lg p-8 border border-border"
+              transition={{ delay: i * 0.08 }}
+              className="bg-card rounded-lg p-6 border border-border"
             >
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-3">
                 {Array.from({ length: t.rating }).map((_, j) => (
-                  <Star key={j} size={16} className="fill-primary text-primary" />
+                  <Star key={j} size={14} className="fill-primary text-primary" />
                 ))}
               </div>
-              <p className="text-foreground leading-relaxed mb-6">"{t.text}"</p>
-              <p className="text-sm font-semibold text-foreground">{t.name}</p>
+              <p className="text-foreground text-sm leading-relaxed mb-4">"{t.text}"</p>
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">{t.name}</p>
             </motion.div>
           ))}
         </div>
