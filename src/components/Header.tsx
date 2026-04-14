@@ -13,6 +13,7 @@ const navLinks = [
   { label: "Budget Calculator", path: "/budget-calculator" },
   { label: "Services", path: "/services" },
   { label: "Contact", path: "/contact" },
+  { label: "360° View", path: "/360-view" },
 ];
 
 export default function Header() {
