@@ -14,7 +14,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import PanoramPage from "./pages/panoram";
 import NotFound from "./pages/NotFound";
-import WhatsAppFloat from "@/components/Whatsappfloat";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const queryClient = new QueryClient();
 
