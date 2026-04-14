@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { useState, useRef, useCallback } from "react";
 import { RotateCcw, Home, ChefHat, Bed, Building } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import panoInterior from "@/assets/pano-interior.jpeg";
 import panoExterior from "@/assets/pano-exterior.jpeg";
 import panoKitchen from "@/assets/pano-kitchen.jpeg";
