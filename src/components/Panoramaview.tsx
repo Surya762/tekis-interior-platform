@@ -1,13 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useRef, useCallback } from "react";
 import { RotateCcw, Home, ChefHat, Bed, Building } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import panoInterior from "@/assets/pano-interior.jpeg";
 import panoExterior from "@/assets/pano-exterior.jpeg";
 import panoKitchen from "@/assets/pano-kitchen.jpeg";
@@ -66,19 +59,19 @@ const PanoramaView = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="mb-12"
         >
-          <div className="line-accent mb-4" />
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">360° Home Tour</h2>
-          <p className="font-body text-muted-foreground text-lg max-w-lg">
-            Drag to explore every corner of our 3BHK showcase home — exterior to interior detailing.
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            360° Home Tour
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-lg">
+            Drag to explore every corner of our home.
           </p>
         </motion.div>
 
-        {/* View selector tabs */}
-        <div className="flex flex-wrap gap-3 mb-8">
+        {/* Tabs */}
+        <div className="flex gap-3 mb-8 flex-wrap">
           {views.map((v, i) => (
             <button
               key={v.id}
@@ -86,29 +79,21 @@ const PanoramaView = () => {
                 setActiveView(i);
                 if (containerRef.current) containerRef.current.scrollLeft = 0;
               }}
-              className={`flex items-center gap-2 px-5 py-3 font-body text-sm tracking-wide uppercase border transition-all ${
-                activeView === i
-                  ? "bg-primary text-primary-foreground border-primary"
-                  : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
+              className={`px-4 py-2 border ${
+                activeView === i ? "bg-black text-white" : ""
               }`}
             >
-              <v.icon className="w-4 h-4" strokeWidth={1.5} />
+              <v.icon className="w-4 h-4 inline mr-2" />
               {v.label}
             </button>
           ))}
         </div>
 
-        {/* Panorama viewer */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative border border-border overflow-hidden"
-        >
+        {/* Panorama */}
+        <div className="relative border overflow-hidden">
           <div
             ref={containerRef}
-            className="overflow-x-scroll overflow-y-hidden cursor-grab active:cursor-grabbing scrollbar-hide"
+            className="overflow-x-scroll cursor-grab active:cursor-grabbing"
             style={{ scrollBehavior: isDragging ? "auto" : "smooth" }}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
@@ -120,20 +105,19 @@ const PanoramaView = () => {
           >
             <img
               src={views[activeView].img}
-              alt={`360° view of ${views[activeView].label}`}
-              className="h-[400px] md:h-[550px] w-auto max-w-none select-none pointer-events-none"
+              className="h-[400px] w-auto max-w-none select-none"
               draggable={false}
-              loading="lazy"
             />
           </div>
 
-          {/* Overlay hint */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-background/80 backdrop-blur-sm px-4 py-2 border border-border">
-            <RotateCcw className="w-4 h-4 text-primary animate-spin" style={{ animationDuration: "3s" }} />
-            <span className="font-body text-xs text-muted-foreground tracking-wide uppercase">Drag to explore</span>
+          {/* Hint */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white px-3 py-1 text-xs border">
+            Drag to explore
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 };
+
+export default PanoramaView;

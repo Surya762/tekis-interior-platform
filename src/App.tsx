@@ -12,6 +12,7 @@ import About from "./pages/About";
 import BudgetCalculator from "./pages/BudgetCalculator";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import PanoramPage from "./pages/panoram";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/budget-calculator" element={<BudgetCalculator />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/360-view" element={<PanoramPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
