@@ -66,13 +66,13 @@ const brandCategories = [
 ];
 
 const testimonials = [
-  { name: "Happy Customer", text: "Very Good with Interiors... planning & execution was very professional.. & quite budgeted Plans.. a big kudos to Teki Interior Contracts Team!", rating: 5 },
-  { name: "Satisfied Homeowner", text: "A big thanks to the Teki's interior team for the amazing work on our home! Everything was designed perfectly as per our needs. The finish and creativity are excellent. Highly satisfied!", rating: 5 },
-  { name: "Creative Client", text: "They perfectly understood my requirements and turned my vision into reality with creative and practical designs.", rating: 5 },
-  { name: "Delighted Customer", text: "The interior design work was excellent, elegant finish. The team understood my requirements perfectly and delivered beyond expectations. Highly satisfied with the overall outcome.", rating: 5 },
-  { name: "Grateful Client", text: "So much obliged and thankful to the whole Tekis Contracts team. Very good Designs and the staff are very friendly and their detailing was very professional. Mainly thankful to Director Mr. Teki Rajiv garu, who is a very humble person.", rating: 5 },
-  { name: "Happy Family", text: "Really it's amazing... Teki's interior designers are doing their best with very comfortable, affordable and very reasonable prices compared to other contractors. Felt very happy to be a fully satisfied customer!", rating: 5 },
-  { name: "Modern Home Owner", text: "A beautifully designed modern bedroom that perfectly blends elegance, comfort, and functionality with smart space utilization. We are fully satisfied with Teki's Interiors and Contracts.", rating: 5 },
+  { name: "Naga raju", text: "Very Good with Interiors... planning & execution was very professional.. & quite budgeted Plans.. a big kudos to Teki Interior Contracts Team!", rating: 5 },
+  { name: "Jhansi Vani Nimmagadda", text: "A big thanks to the Teki's interior team for the amazing work on our home! Everything was designed perfectly as per our needs. The finish and creativity are excellent. Highly satisfied!", rating: 5 },
+  { name: "Rakesh Banala", text: "They perfectly understood my requirements and turned my vision into reality with creative and practical designs.", rating: 5 },
+  { name: "Praveen ch", text: "The interior design work was excellent, elegant finish. The team understood my requirements perfectly and delivered beyond expectations. Highly satisfied with the overall outcome.", rating: 5 },
+  { name: "Sindhuja Anupoju", text: "So much obliged and thankful to the whole Tekis Contracts team. Very good Designs and the staff are very friendly and their detailing was very professional. Mainly thankful to Director Mr. Teki Rajiv garu, who is a very humble person.", rating: 5 },
+  { name: "Ram Mohan", text: "Really it's amazing... Teki's interior designers are doing their best with very comfortable, affordable and very reasonable prices compared to other contractors. Felt very happy to be a fully satisfied customer!", rating: 5 },
+  { name: "Sindhuja dharmavarapu", text: "A beautifully designed modern bedroom that perfectly blends elegance, comfort, and functionality with smart space utilization. We are fully satisfied with Teki's Interiors and Contracts.", rating: 5 },
 ];
 
 export default function Index() {
