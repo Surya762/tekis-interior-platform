@@ -130,5 +130,3 @@ const PanoramaView = () => {
     </section>
   );
 };
-
-export default PanoramaView;
