@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useState, useRef, useCallback } from "react";
 import { RotateCcw, Home, ChefHat, Bed, Building } from "lucide-react";
+import { Pannellum } from "pannellum-react";
+import "pannellum-react/es/css/pannellum.css";
 import panoInterior from "@/assets/pano-interior.jpeg";
 import panoExterior from "@/assets/pano-exterior.jpeg";
 import panoKitchen from "@/assets/pano-kitchen.jpeg";
@@ -103,10 +105,16 @@ const PanoramaView = () => {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleMouseUp}
           >
-            <img
-              src={views[activeView].img}
-              className="h-[400px] w-auto max-w-none select-none"
-              draggable={false}
+            <Pannellum
+              width="100%"
+              height="500px"
+              image={views[activeView].img}
+              pitch={10}
+              yaw={180}
+              hfov={110}
+              autoLoad
+              showZoomCtrl={true}
+              showFullscreenCtrl={true}
             />
           </div>
 
