@@ -5,6 +5,7 @@ import logo from "@/assets/logo.jpeg";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import Contact from "@/pages/Contact";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -50,6 +51,10 @@ export default function Header() {
           <Link to="/contact">Book Consultation</Link>
           </Button>
         </div>
+
+        <Link to="/360-view">
+        <button className="btn-primary">360° View</button>
+        </Link>
 
         <button
           className="md:hidden text-foreground"
