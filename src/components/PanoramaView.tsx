@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useRef, useCallback } from "react";
 import { RotateCcw, Home, ChefHat, Bed, Building } from "lucide-react";
-import { Pannellum } from "pannellum-react";
+import "pannellum-react/es/css/pannellum.css";
 
 import panoInterior from "@/assets/pano-interior.jpeg";
 import panoExterior from "@/assets/pano-exterior.jpeg";
