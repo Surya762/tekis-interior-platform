@@ -51,9 +51,9 @@ export const styleLabels: Record<DesignStyle, string> = {
 
 export const budgetLabels: Record<BudgetRange, string> = {
   budget: "Under ₹5L",
-  "mid-range": "₹5L – ₹10L",
-  premium: "₹10L – ₹20L",
-  luxury: "₹20L+",
+  "mid-range": "₹5L – ₹7L",
+  premium: "₹5.5L – ₹15L",
+  luxury: "₹15L+",
 };
 
 export const designs: Design[] = [

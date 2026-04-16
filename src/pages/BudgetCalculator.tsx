@@ -19,8 +19,8 @@ const bhkDefaults: Record<string, number[]> = {
 
 const pricing: Record<string, { min: number; max: number }> = {
   basic: { min: 850, max: 1250 },
-  premium: { min: 1400, max: 2000 },
-  luxury: { min: 2250, max: 4000 },
+  premium: { min: 1300, max: 1800 },
+  luxury: { min: 1950, max: 4000 },
 };
 
 const areaFields = [
