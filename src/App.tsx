@@ -14,6 +14,8 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import ThreeDView from "./pages/ThreeDView";
+
 
 
 const queryClient = new QueryClient();
@@ -33,6 +35,7 @@ const App = () => (
           <Route path="/budget-calculator" element={<BudgetCalculator />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/3d-view" element={<ThreeDView />} />
          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
