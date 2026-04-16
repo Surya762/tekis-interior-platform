@@ -80,17 +80,17 @@ export default function Index() {
   const featured = designs.slice(0, 4);
 
   return (
-    <div className="mt-10 flex flex-wrap gap-4">
-      {/* Hero */}
-<section className="relative min-h-screen flex items-center overflow-hidden ">
-  <div className="absolute inset-0">
-    <img
-      src={heroImage}
-      alt="Hero"
-      className="w-full h-full object-cover"
-    />
-    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-  </div>
+  <div>
+    {/* Hero */}
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="Hero"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+      </div>
 
   <div className="relative z-10 max-w-7xl mx-auto px-6">
     <motion.div
