@@ -121,6 +121,7 @@ Please share more details and guide me further. Thank you!`;
     const phoneNumber = "916301780982";
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)};
+      console.log(url);
        window.open(url, "_blank");
   );
   };
