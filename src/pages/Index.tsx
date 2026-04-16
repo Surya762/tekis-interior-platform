@@ -83,43 +83,56 @@ export default function Index() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative min-h-screen flex items-center">
-        <div className="absolute inset-0">
-          <img src={heroImage} alt="Luxury interior by TEKI'S" width={1920} height={1080} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-2xl"
-          >
-            <p className="text-primary-foreground/60 text-sm tracking-[0.3em] uppercase mb-4">TEKI'S Interior & Contracts</p>
-            <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight text-primary-foreground">
-              Designing Dreams.
-              <br />
-              <span className="text-gradient-gold">Building Trust.</span>
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-lg">
-              We transform residential and commercial spaces with premium finishes, smart design, and high-quality materials.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button size="lg" asChild>
-                <Link to="/designs">
-                  Explore Designs <ArrowRight className="ml-2" size={18} />
-                </Link>
-              </Button>
-              <Button size="lg" asChild>
-                <Link to="/budget-calculator">
-                  Calculate Budget <ArrowRight className="ml-2" size={18} />
-                </Link>
-              </Button>
-            </div>
-          </motion.div>
+        {/* Pricing + BHK Buttons */}
+      <div className="mt-6">
+
+      <p className="text-primary-foreground/70 text-sm mb-2">
+       Starting from
+      </p>
+
+     <p className="text-2xl font-bold text-gradient-gold mb-4">
+     ₹2.5 Lakhs*
+    </p>
+
+    <div className="flex flex-wrap gap-3 mb-6">
+     <a href="https://wa.me/916301780982?text=Hi%20I%20am%20interested%20in%201BHK%20interior" target="_blank">
+    <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+        1 BHK
+      </Button>
+    </a>
+    <a href="https://wa.me/916301780982?text=Hi%20I%20am%20interested%20in%202BHK%20interior" target="_blank">
+      <Button className="bg-white text-black">
+        2 BHK ⭐
+      </Button>
+    </a>
+
+    <a href="https://wa.me/916301780982?text=Hi%20I%20am%20interested%20in%203BHK%20interior" target="_blank">
+      <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+        3 BHK
+      </Button>
+    </a>
+   </div>
+
+</div>
+
+{/* Existing Buttons */}
+<div className="flex flex-wrap gap-4">
+  <Button size="lg" asChild>
+    <Link to="/designs">
+      Explore Designs <ArrowRight className="ml-2" size={18} />
+    </Link>
+  </Button>
+  <Button size="lg" asChild>
+    <Link to="/budget-calculator">
+      Calculate Budget <ArrowRight className="ml-2" size={18} />
+    </Link>
+  </Button>
+</div>
+  </motion.div>
         </div>
       </section>
 
-      {/* Featured Designs */}
+      {/* Featured Designs */}      
       <section className="section-padding max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
