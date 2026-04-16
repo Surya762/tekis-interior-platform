@@ -408,4 +408,30 @@ export const designs: Design[] = [
     rating: 4.7,
     materials: ["LED False Ceiling", "Texture Paint"],
   },
+  {
+    id: "28",
+    title: "Kitchen with Quartz Countertops",
+    category: "kitchen",
+    style: "modern",
+    budget: "budget",
+    costEstimate: "₹2,50,000",
+    image: kitchen1,
+    description: "A modern kitchen with quartz countertops and sleek cabinetry.",
+    designer: "TEKI'S Design Team",
+    rating: 4.8,
+    materials: ["LED False Ceiling", "Italian Marble", "Premium Paint"]
+  },
+  {
+    id: "29",
+    title: "Minimalist kitchen with Quartz Countertops",
+    category: "kitchen",
+    style: "minimalist",
+    budget: "budget",
+    costEstimate: "₹1,50,000",
+    image: kitchen2,
+    description: "A minimalist kitchen with quartz countertops and simple cabinetry.",
+    designer: "TEKI'S Design Team",
+    rating: 4.6,
+    materials: ["Gypsum Ceiling", "Texture Paint"]
+  }
 ];
