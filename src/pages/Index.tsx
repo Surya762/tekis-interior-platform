@@ -80,57 +80,72 @@ export default function Index() {
   const featured = designs.slice(0, 4);
 
   return (
-    <div className="min-h-screen">
+    <div className="mt-10 flex flex-wrap gap-4">
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center">
-        {/* Pricing + BHK Buttons */}
-      <div className="mt-6">
+<section className="relative min-h-screen flex items-center">
+  <div className="absolute inset-0">
+    <img
+      src={heroImage}
+      alt="Luxury interior"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+  </div>
 
-      <p className="text-primary-foreground/70 text-sm mb-2">
-       Starting from
+  <div className="relative z-10 max-w-7xl mx-auto px-6">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="max-w-2xl"
+    >
+      <p className="text-white/70 text-sm mb-4">
+        TEKI'S Interior & Contracts
       </p>
 
-     <p className="text-2xl font-bold text-gradient-gold mb-4">
-     ₹2.5 Lakhs*
-    </p>
+      <h1 className="text-5xl md:text-7xl font-bold text-white">
+        Designing Dreams.
+      </h1>
 
-    <div className="flex flex-wrap gap-3 mb-6">
-     <a href="https://wa.me/916301780982?text=Hi%20I%20am%20interested%20in%201BHK%20interior" target="_blank">
-    <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-        1 BHK
-      </Button>
-    </a>
-    <a href="https://wa.me/916301780982?text=Hi%20I%20am%20interested%20in%202BHK%20interior" target="_blank">
-      <Button className="bg-white text-black">
-        2 BHK ⭐
-      </Button>
-    </a>
+      <h1 className="text-5xl md:text-7xl font-bold text-yellow-400">
+        Building Trust.
+      </h1>
 
-    <a href="https://wa.me/916301780982?text=Hi%20I%20am%20interested%20in%203BHK%20interior" target="_blank">
-      <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-        3 BHK
-      </Button>
-    </a>
-   </div>
+      {/* Pricing */}
+      <div className="mt-6">
+        <p className="text-white/70 text-sm">Starting from</p>
+        <p className="text-2xl font-bold text-yellow-400 mb-4">
+          ₹2.5 Lakhs*
+        </p>
 
-</div>
+        <div className="flex gap-3 flex-wrap">
+          <a href="https://wa.me/916301780982?text=Hi%20I%20want%201BHK" target="_blank">
+            <Button variant="outline">1 BHK</Button>
+          </a>
 
-{/* Existing Buttons */}
-<div className="flex flex-wrap gap-4">
-  <Button size="lg" asChild>
-    <Link to="/designs">
-      Explore Designs <ArrowRight className="ml-2" size={18} />
-    </Link>
-  </Button>
-  <Button size="lg" asChild>
-    <Link to="/budget-calculator">
-      Calculate Budget <ArrowRight className="ml-2" size={18} />
-    </Link>
-  </Button>
-</div>
-  </motion.div>
+          <a href="https://wa.me/916301780982?text=Hi%20I%20want%202BHK" target="_blank">
+            <Button className="bg-white text-black">2 BHK ⭐</Button>
+          </a>
+
+          <a href="https://wa.me/916301780982?text=Hi%20I%20want%203BHK" target="_blank">
+            <Button variant="outline">3 BHK</Button>
+          </a>
         </div>
-      </section>
+      </div>
+
+      {/* CTA Buttons */}
+      <div className="mt-6 flex gap-4 flex-wrap">
+        <Button asChild>
+          <Link to="/designs">Explore Designs</Link>
+        </Button>
+
+        <Button asChild>
+          <Link to="/budget-calculator">Calculate Budget</Link>
+        </Button>
+      </div>
+    </motion.div>
+  </div>
+</section>      
 
       {/* Featured Designs */}      
       <section className="section-padding max-w-7xl mx-auto">
@@ -204,7 +219,7 @@ export default function Index() {
       {/* Specialties */}
       <section className="section-padding max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
