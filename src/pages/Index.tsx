@@ -6,7 +6,8 @@ import DesignCard from "@/components/DesignCard";
 import { designs } from "@/data/designs";
 import heroImage from "@/assets/hero-living.jpg";
 import BudgetCalculator from "@/components/BudgetCalculator";
-import PanoramaView from "@/components/Panoramaview";
+
+
 const steps = [
   { icon: Palette, title: "Explore Designs", desc: "Browse our portfolio of modular kitchens, commercial interiors, and residential projects." },
   { icon: Ruler, title: "Customize Your Space", desc: "Work with our experienced team to tailor every detail with premium finishes and high-quality materials." },
