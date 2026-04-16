@@ -109,16 +109,15 @@ ${selectedAreas}
 Total Area: ${totalSqft} sq.ft
 `;
 
-  const phoneNumber = "91XXXXXXXXXX";
+  const phoneNumber = "916301780982";
 
-  window.open(
-    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-    "_blank"
-  );
-
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open( url, "_blank");
+ }
+  
   setTimeout(() => {
     navigate("/contact");
-  }, 800);
+  }, 2000);
 };
 
   return (
