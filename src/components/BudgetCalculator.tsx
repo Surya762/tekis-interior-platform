@@ -120,9 +120,9 @@ Please share more details and guide me further. Thank you!`;
 
     const phoneNumber = "916301780982";
     window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)};
+       window.open(url, "_blank");
+  );
   };
 
   return (
