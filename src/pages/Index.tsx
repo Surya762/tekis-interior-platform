@@ -86,7 +86,7 @@ export default function Index() {
   <div className="absolute inset-0">
     <img
       src={heroImage}
-      alt="hero-living.jpg"
+      alt="Hero"
       className="w-full h-full object-cover"
     />
     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
