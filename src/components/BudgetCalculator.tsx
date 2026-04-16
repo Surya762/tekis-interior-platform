@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Calculator, Home, IndianRupee } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const bhkDefaults: Record<string, number[]> = {
   "1": [0, 0, 0, 0, 0, 0, 0, 0],
@@ -40,6 +41,7 @@ const areaFields = [
 type AreaKey = (typeof areaFields)[number]["key"];
 
 export default function BudgetCalculator() {
+  const navigate = useNavigate();
    
 
   const [bhk, setBhk] = useState("");
