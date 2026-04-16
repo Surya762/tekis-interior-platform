@@ -85,36 +85,40 @@ export default function BudgetCalculator() {
   }, [totalSqft, pkg]);
 
   const handleEstimateClick = () => {
-    if (totalSqft === 0) return;
+  if (totalSqft === 0) return;
 
-    const selectedAreas = areaFields
-      .filter((f) => includedAreas[f.key] && (areas[f.key] || 0) > 0)
-      .map((f) => `• ${f.label}: ${areas[f.key]} sq.ft`)
-      .join("\n");
+  if (!bhk) {
+    alert("Please select BHK");
+    return;
+  }
 
-    const message = `Hi Tekis Interiors! 🏠
+  const selectedAreas = Object.entries(areas)
+    .filter(([key, value]) => includedAreas[key as AreaKey] && value > 0)
+    .map(([key, value]) => `${key}: ${value} sq.ft`)
+    .join("\n");
 
-I'd like an interior design estimate:
+  const message = `Hi, I want interior design quotation.
 
-*Home Type:* ${bhk} BHK
-*Package:* ${pkg.charAt(0).toUpperCase() + pkg.slice(1)}
+BHK: ${bhk}
+Package: ${pkg}
 
-*Selected Areas:*
+Selected Areas:
 ${selectedAreas}
 
-*Total Area:* ${totalSqft} sq.ft
+Total Area: ${totalSqft} sq.ft
+`;
 
-💰 *Estimated Budget:*
-₹${estimate.min.toLocaleString("en-IN")} – ₹${estimate.max.toLocaleString("en-IN")}
+  const phoneNumber = "91XXXXXXXXXX";
 
-Please share more details and guide me further. Thank you!`;
+  window.open(
+    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
 
-    const phoneNumber = "916301780982";
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
-  };
+  setTimeout(() => {
+    navigate("/contact");
+  }, 800);
+};
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
