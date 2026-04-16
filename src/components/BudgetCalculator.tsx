@@ -94,37 +94,36 @@ export default function BudgetCalculator() {
   }, [totalSqft, pkg]);
 
   const handleEstimateClick = () => {
-    if (totalSqft === 0) return;
+  if (totalSqft === 0) return;
 
-    const selectedAreas = areaFields
-      .filter((f) => includedAreas[f.key] && (areas[f.key] || 0) > 0)
-      .map((f) => `• ${f.label}: ${areas[f.key]} sq.ft`)
-      .join("\n");
+  if (!bhk) {
+    alert("Please select BHK");
+    return;
+  }
 
-    const message = `Hi Tekis Interiors! 🏠
+  const selectedAreas = areaFields
+    .filter((field) => areas[field.key] > 0)
+    .map((field) => `${field.label}: ${areas[field.key]} sq.ft`)
+    .join("%0A");
 
-I'd like an interior design estimate:
+  const message =
+    "Hi, I want interior design quotation.%0A%0A" +
+    "BHK: " + bhk + "%0A" +
+    "Package: " + pkg + "%0A%0A" +
+    "Areas:%0A" +
+    selectedAreas + "%0A%0A" +
+    "Total Area: " + totalSqft + " sq.ft";
 
-*Home Type:* ${bhk} BHK
-*Package:* ${pkg.charAt(0).toUpperCase() + pkg.slice(1)}
+  const phoneNumber = "916301780982";
 
-*Selected Areas:*
-${selectedAreas}
+  const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
 
-*Total Area:* ${totalSqft} sq.ft
+  window.location.href = url;
 
-💰 *Estimated Budget:*
-₹${estimate.min.toLocaleString("en-IN")} – ₹${estimate.max.toLocaleString("en-IN")}
-
-Please share more details and guide me further. Thank you!`;
-
-    const phoneNumber = "916301780982";
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)};
-      console.log(url);
-       window.location.href = url;
-  );
-  };
+  setTimeout(() => {
+    navigate("/contact");
+  }, 800);
+};
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
