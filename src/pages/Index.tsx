@@ -82,7 +82,7 @@ export default function Index() {
   return (
     <div className="mt-10 flex flex-wrap gap-4">
       {/* Hero */}
-<section className="relative min-h-screen flex items-center">
+<section className="relative min-h-screen flex items-center overflow-hidden ">
   <div className="absolute inset-0">
     <img
       src={heroImage}
