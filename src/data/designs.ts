@@ -428,7 +428,7 @@ export const designs: Design[] = [
     style: "minimalist",
     budget: "budget",
     costEstimate: "₹1,50,000",
-    image: kitchen2,
+    image: kitchen4,
     description: "A minimalist kitchen with quartz countertops and simple cabinetry.",
     designer: "TEKI'S Design Team",
     rating: 4.6,
