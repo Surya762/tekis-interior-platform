@@ -94,51 +94,62 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
   {/* Background Image */}
   <div className="absolute inset-0">
     <img
-      src={heroImage}   // ✅ FIXED
+      src={heroImage}
       alt="Hero"
       className="w-full h-full object-cover"
     />
   </div>
 
-  {/* Overlay (important for readability) */}
+  {/* Overlay */}
   <div className="absolute inset-0 bg-black/40"></div>
 
   {/* Content */}
   <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
 
+    {/* Heading */}
     <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
       Design Your Dream Home
     </h1>
 
-    <p className="text-white/90 mb-10 text-lg">
+    <p className="text-white/90 mb-8 text-lg">
       Click any design to get instant details on WhatsApp
     </p>
 
-    {/* Cards */}
+    {/* CTA Buttons */}
+    <div className="flex flex-wrap justify-center gap-4 mb-10">
+
+      <Link to="/designs">
+        <Button className="bg-white text-black px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">
+          Explore Designs
+        </Button>
+      </Link>
+
+      <Link to="/budget">
+        <Button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow hover:bg-yellow-300 transition">
+          Budget Calculator
+        </Button>
+      </Link>
+
+    </div>
+
+    {/* BHK Cards */}
     <div className="grid md:grid-cols-3 gap-6">
 
       {/* 1 BHK */}
       <a href={getWhatsAppLink("1 BHK")} target="_blank" rel="noopener noreferrer">
         <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
           
-          <img
-            src="/images/1bhk.jpeg"
-            alt="1 BHK"
-            className="h-44 w-full object-cover"
-          />
+          <img src="/images/1bhk.jpeg" className="h-44 w-full object-cover" />
 
           <div className="p-4 text-center">
             <h3 className="font-bold text-lg">1 BHK</h3>
             <p className="text-sm text-gray-500">Starts at @ ₹2.34 Lakhs*</p>
-            <p className="text-xl font-bold text-primary mb-3">
-              ₹2.34 Lakhs*
-            </p>
+            <p className="text-xl font-bold text-primary mb-3">₹2.34 Lakhs*</p>
 
             <button className="w-full bg-black text-white py-2 rounded">
               Get Quote
             </button>
           </div>
-
         </div>
       </a>
 
@@ -146,24 +157,17 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
       <a href={getWhatsAppLink("2 BHK")} target="_blank" rel="noopener noreferrer">
         <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
           
-          <img
-            src="/images/2bhk.jpeg"
-            alt="2 BHK"
-            className="h-44 w-full object-cover"
-          />
+          <img src="/images/2bhk.jpeg" className="h-44 w-full object-cover" />
 
           <div className="p-4 text-center">
             <h3 className="font-bold text-lg">2 BHK ⭐</h3>
             <p className="text-sm text-gray-500">Starts at @ ₹3.59 Lakhs*</p>
-            <p className="text-xl font-bold text-primary mb-3">
-              ₹3.59 Lakhs*
-            </p>
+            <p className="text-xl font-bold text-primary mb-3">₹3.59 Lakhs*</p>
 
             <button className="w-full bg-yellow-400 text-black py-2 rounded font-semibold">
               Get Quote
             </button>
           </div>
-
         </div>
       </a>
 
@@ -171,33 +175,25 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
       <a href={getWhatsAppLink("3 BHK")} target="_blank" rel="noopener noreferrer">
         <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
           
-          <img
-            src="/images/3bhk.jpeg"
-            alt="3 BHK"
-            className="h-44 w-full object-cover"
-          />
+          <img src="/images/3bhk.jpeg" className="h-44 w-full object-cover" />
 
           <div className="p-4 text-center">
             <h3 className="font-bold text-lg">3 BHK</h3>
             <p className="text-sm text-gray-500">Starts at @ ₹4.59 Lakhs*</p>
-            <p className="text-xl font-bold text-primary mb-3">
-              ₹4.59 Lakhs*
-            </p>
+            <p className="text-xl font-bold text-primary mb-3">₹4.59 Lakhs*</p>
 
             <button className="w-full bg-black text-white py-2 rounded">
               Get Quote
             </button>
           </div>
-
         </div>
       </a>
 
     </div>
   </div>
 </section>
-          
-        
-       {/* Services */}
+  
+     {/* Services */}
       <section id="services" className="bg-cream section-padding">
         <div className="max-w-7xl mx-auto">
           <motion.div
