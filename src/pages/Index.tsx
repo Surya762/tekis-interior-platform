@@ -118,20 +118,27 @@ export default function Index() {
           ₹2.5 Lakhs*
         </p>
 
-        <div className="flex gap-3 flex-wrap">
-          <a href="https://wa.me/916301780982?text=Hi%20I%20want%201BHK" target="_blank">
-            <Button variant="outline">1 BHK</Button>
-          </a>
+        <a
+      href="https://wa.me/916301780982?text=Hi%20Tekis!%20🏠%20Please%20share%20more%20details%20about%201%20BHK%20interior%20design"
+      target="_blank"
+    >
+      <Button variant="outline">1 BHK</Button>
+    </a>
 
-          <a href="https://wa.me/916301780982?text=Hi%20I%20want%202BHK" target="_blank">
-            <Button className="bg-white text-black">2 BHK ⭐</Button>
-          </a>
+    <a
+      href="https://wa.me/916301780982?text=Hi%20Tekis!%20🏠%20Please%20share%20more%20details%20about%202%20BHK%20interior%20design"
+      target="_blank"
+    >
+      <Button className="bg-white text-black">2 BHK ⭐</Button>
+    </a>
 
-          <a href="https://wa.me/916301780982?text=Hi%20I%20want%203BHK" target="_blank">
-            <Button variant="outline">3 BHK</Button>
-          </a>
-        </div>
-      </div>
+    <a
+      href="https://wa.me/916301780982?text=Hi%20Tekis!%20🏠%20Please%20share%20more%20details%20about%203%20BHK%20interior%20design"
+      target="_blank"
+    >
+      <Button variant="outline">3 BHK</Button>
+    </a>
+  </div>
 
       {/* CTA Buttons */}
       <div className="mt-6 flex gap-4 flex-wrap">
