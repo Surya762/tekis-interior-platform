@@ -78,12 +78,14 @@ const testimonials = [
 
 export default function Index() {
   const featured = designs.slice(0, 4);
-  const getWhatsAppLink = (bhk) => {
+  const getWhatsAppLink = (bhk: string) => {
   const msg = `Hi Tekis Interior! 🏠
 
 I'm interested in ${bhk} interior design. Please share more details & guide me further. Thank you!`;
 
-  return `https://wa.me/916301780982?text=${encodeURIComponent(msg)}`;
+  const encodedMsg = encodeURIComponent(msg);
+
+  return `https://api.whatsapp.com/send?phone=916301780982&text=${encodedMsg}`;
 };
 
   return (
