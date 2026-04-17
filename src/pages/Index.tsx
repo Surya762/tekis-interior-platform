@@ -118,27 +118,19 @@ export default function Index() {
           ₹2.5 Lakhs*
         </p>
 
-        <a
-      href="https://wa.me/916301780982?text=Hi%20Tekis!%20🏠%20Please%20share%20more%20details%20about%201%20BHK%20interior%20design"
-      target="_blank"
-    >
-      <Button variant="outline">1 BHK</Button>
-    </a>
+      <a href="https://wa.me/916301780982?text=Hi%20Tekis!%20%F0%9F%8F%A0%20Please%20share%20more%20details%20about%201%20BHK%20interior%20design.%20Thank%20you!" target="_blank">
+  <Button variant="outline">1 BHK</Button>
+</a>
 
-    <a
-      href="https://wa.me/916301780982?text=Hi%20Tekis!%20🏠%20Please%20share%20more%20details%20about%202%20BHK%20interior%20design"
-      target="_blank"
-    >
-      <Button className="bg-white text-black">2 BHK ⭐</Button>
-    </a>
+<a href="https://wa.me/916301780982?text=Hi%20Tekis!%20%F0%9F%8F%A0%20Please%20share%20more%20details%20about%202%20BHK%20interior%20design.%20Thank%20you!" target="_blank">
+  <Button className="bg-white text-black">2 BHK ⭐</Button>
+</a>
 
-    <a
-      href="https://wa.me/916301780982?text=Hi%20Tekis!%20🏠%20Please%20share%20more%20details%20about%203%20BHK%20interior%20design"
-      target="_blank"
-    >
-      <Button variant="outline">3 BHK</Button>
-    </a>
-  </div>
+<a href="https://wa.me/916301780982?text=Hi%20Tekis!%20%F0%9F%8F%A0%20Please%20share%20more%20details%20about%203%20BHK%20interior%20design.%20Thank%20you!" target="_blank">
+  <Button variant="outline">3 BHK</Button>
+</a>  
+  </div>    
+  
 
       {/* CTA Buttons */}
       <div className="mt-6 flex gap-4 flex-wrap">
