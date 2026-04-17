@@ -89,25 +89,28 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
   return (
   <div>
     {/* Hero */}
-    <section className="relative min-h-screen flex items-center justify-center bg-black text-white">
+<section className="relative min-h-screen flex items-center justify-center text-white">
 
-  {/* Background */}
+  {/* Background Image */}
   <div className="absolute inset-0">
     <img
-      src="/images/hero.jpg"
+      src={heroImage}   // ✅ FIXED
       alt="Hero"
-      className="w-full h-full object-cover opacity-40"
+      className="w-full h-full object-cover"
     />
   </div>
+
+  {/* Overlay (important for readability) */}
+  <div className="absolute inset-0 bg-black/40"></div>
 
   {/* Content */}
   <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
 
-    <h1 className="text-3xl md:text-5xl font-bold mb-4">
+    <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
       Design Your Dream Home
     </h1>
 
-    <p className="text-white/80 mb-10">
+    <p className="text-white/90 mb-10 text-lg">
       Click any design to get instant details on WhatsApp
     </p>
 
@@ -115,14 +118,13 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
     <div className="grid md:grid-cols-3 gap-6">
 
       {/* 1 BHK */}
-      <a href={getWhatsAppLink("1 BHK")} target="_blank">
-        <div className="bg-white text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 transition cursor-pointer">
+      <a href={getWhatsAppLink("1 BHK")} target="_blank" rel="noopener noreferrer">
+        <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
           
-          {/* Clickable Image */}
           <img
             src="/images/1bhk.jpeg"
             alt="1 BHK"
-            className="h-40 w-full object-cover"
+            className="h-44 w-full object-cover"
           />
 
           <div className="p-4 text-center">
@@ -141,13 +143,13 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
       </a>
 
       {/* 2 BHK */}
-      <a href={getWhatsAppLink("2 BHK")} target="_blank">
-        <div className="bg-white text-black rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:scale-105 transition cursor-pointer">
+      <a href={getWhatsAppLink("2 BHK")} target="_blank" rel="noopener noreferrer">
+        <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
           
           <img
             src="/images/2bhk.jpeg"
             alt="2 BHK"
-            className="h-40 w-full object-cover"
+            className="h-44 w-full object-cover"
           />
 
           <div className="p-4 text-center">
@@ -166,13 +168,13 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
       </a>
 
       {/* 3 BHK */}
-      <a href={getWhatsAppLink("3 BHK")} target="_blank">
-        <div className="bg-white text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 transition cursor-pointer">
+      <a href={getWhatsAppLink("3 BHK")} target="_blank" rel="noopener noreferrer">
+        <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
           
           <img
             src="/images/3bhk.jpeg"
             alt="3 BHK"
-            className="h-40 w-full object-cover"
+            className="h-44 w-full object-cover"
           />
 
           <div className="p-4 text-center">
@@ -193,6 +195,7 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
     </div>
   </div>
 </section>
+          
         
        {/* Services */}
       <section id="services" className="bg-cream section-padding">
