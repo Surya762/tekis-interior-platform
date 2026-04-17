@@ -77,7 +77,7 @@ export default function BudgetCalculator() {
       "Areas:%0A" +
       selectedAreas + "%0A%0A" +
       "Total Area: " + totalSqft + " sq.ft";
-      "(this area and estimate may vary depends on the site condition)%0A%0A"
+      "(this area and estimate may vary depends on the site condition)%0A%0A" +
       "please share more details and guide me further. Thank you! 🙏";
 
     const phoneNumber = "916301780982"; // 🔴 change if needed
