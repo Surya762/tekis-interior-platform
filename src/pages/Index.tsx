@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import DesignCard from "@/components/DesignCard";
 import { designs } from "@/data/designs";
 import heroImage from "@/assets/hero-living.jpg";
-import BudgetCalculator from "@/components/BudgetCalculator";
+import Budget from "@/components/BudgetCalculator";
 import images from "@/public/images";
 
 const steps = [

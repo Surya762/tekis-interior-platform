@@ -9,7 +9,7 @@ import Index from "./pages/Index";
 import Designs from "./pages/Designs";
 import DesignDetail from "./pages/DesignDetail";
 import About from "./pages/About";
-import BudgetCalculator from "./pages/BudgetCalculator";
+import Budget from "./pages/BudgetCalculator";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
