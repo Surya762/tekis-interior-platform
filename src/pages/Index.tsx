@@ -6,7 +6,7 @@ import DesignCard from "@/components/DesignCard";
 import { designs } from "@/data/designs";
 import heroImage from "@/assets/hero-living.jpg";
 import BudgetCalculator from "@/components/BudgetCalculator";
-
+import images from "@/public/images";
 
 const steps = [
   { icon: Palette, title: "Explore Designs", desc: "Browse our portfolio of modular kitchens, commercial interiors, and residential projects." },
@@ -120,14 +120,14 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
           
           {/* Clickable Image */}
           <img
-            src="/images/1bhk.jpg"
+            src="/images/1bhk.jpeg"
             alt="1 BHK"
             className="h-40 w-full object-cover"
           />
 
           <div className="p-4 text-center">
             <h3 className="font-bold text-lg">1 BHK</h3>
-            <p className="text-sm text-gray-500">Starting from</p>
+            <p className="text-sm text-gray-500">Starts at @ ₹2.34 Lakhs*</p>
             <p className="text-xl font-bold text-primary mb-3">
               ₹2.34 Lakhs*
             </p>
@@ -145,14 +145,14 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
         <div className="bg-white text-black rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:scale-105 transition cursor-pointer">
           
           <img
-            src="/images/2bhk.jpg"
+            src="/images/2bhk.jpeg"
             alt="2 BHK"
             className="h-40 w-full object-cover"
           />
 
           <div className="p-4 text-center">
             <h3 className="font-bold text-lg">2 BHK ⭐</h3>
-            <p className="text-sm text-gray-500">Starting from</p>
+            <p className="text-sm text-gray-500">Starts at @ ₹3.59 Lakhs*</p>
             <p className="text-xl font-bold text-primary mb-3">
               ₹3.59 Lakhs*
             </p>
@@ -170,14 +170,14 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
         <div className="bg-white text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 transition cursor-pointer">
           
           <img
-            src="/images/3bhk.jpg"
+            src="/images/3bhk.jpeg"
             alt="3 BHK"
             className="h-40 w-full object-cover"
           />
 
           <div className="p-4 text-center">
             <h3 className="font-bold text-lg">3 BHK</h3>
-            <p className="text-sm text-gray-500">Starting from</p>
+            <p className="text-sm text-gray-500">Starts at @ ₹4.59 Lakhs*</p>
             <p className="text-xl font-bold text-primary mb-3">
               ₹4.59 Lakhs*
             </p>
