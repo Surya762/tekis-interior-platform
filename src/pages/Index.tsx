@@ -78,104 +78,123 @@ const testimonials = [
 
 export default function Index() {
   const featured = designs.slice(0, 4);
+  const getWhatsAppLink = (bhk) => {
+  const msg = `Hi Tekis Interior! 🏠
+
+I'm interested in ${bhk} interior design. Please share more details & guide me further. Thank you!`;
+
+  return `https://wa.me/916301780982?text=${encodeURIComponent(msg)}`;
+};
 
   return (
   <div>
     {/* Hero */}
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Hero"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center bg-black text-white">
 
-  <div className="relative z-10 max-w-7xl mx-auto px-6">
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="max-w-2xl"
-    >
-      <p className="text-white/70 text-sm mb-4">
-        TEKI'S Interior & Contracts
-      </p>
-
-      <h1 className="text-5xl md:text-7xl font-bold text-white">
-        Designing Dreams.
-      </h1>
-
-      <h1 className="text-5xl md:text-7xl font-bold text-yellow-400">
-        Building Trust.
-      </h1>
-
-      {/* Pricing */}
-      <div className="mt-6">
-        <p className="text-white/70 text-sm">Starting from</p>
-        <p className="text-2xl font-bold text-yellow-400 mb-4">
-          ₹2.5 Lakhs*
-        </p>
-
-      <a href="https://wa.me/916301780982?text=Hi%20Tekis!%20%F0%9F%8F%A0%20Please%20share%20more%20details%20about%201%20BHK%20interior%20design.%20Thank%20you!" target="_blank">
-  <Button variant="outline">1 BHK</Button>
-</a>
-
-<a href="https://wa.me/916301780982?text=Hi%20Tekis!%20%F0%9F%8F%A0%20Please%20share%20more%20details%20about%202%20BHK%20interior%20design.%20Thank%20you!" target="_blank">
-  <Button className="bg-white text-black">2 BHK ⭐</Button>
-</a>
-
-<a href="https://wa.me/916301780982?text=Hi%20Tekis!%20%F0%9F%8F%A0%20Please%20share%20more%20details%20about%203%20BHK%20interior%20design.%20Thank%20you!" target="_blank">
-  <Button variant="outline">3 BHK</Button>
-</a>  
-  </div>    
-  
-
-      {/* CTA Buttons */}
-      <div className="mt-6 flex gap-4 flex-wrap">
-        <Button asChild>
-          <Link to="/designs">Explore Designs</Link>
-        </Button>
-
-        <Button asChild>
-          <Link to="/budget-calculator">Calculate Budget</Link>
-        </Button>
-      </div>
-    </motion.div>
+  {/* Background */}
+  <div className="absolute inset-0">
+    <img
+      src="/images/hero.jpg"
+      alt="Hero"
+      className="w-full h-full object-cover opacity-40"
+    />
   </div>
-</section>      
 
-      {/* Featured Designs */}      
-      <section className="section-padding max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex items-end justify-between mb-12"
-        >
-          <div>
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-2">Our Portfolio</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Featured Designs</h2>
+  {/* Content */}
+  <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
+
+    <h1 className="text-3xl md:text-5xl font-bold mb-4">
+      Design Your Dream Home
+    </h1>
+
+    <p className="text-white/80 mb-10">
+      Click any design to get instant details on WhatsApp
+    </p>
+
+    {/* Cards */}
+    <div className="grid md:grid-cols-3 gap-6">
+
+      {/* 1 BHK */}
+      <a href={getWhatsAppLink("1 BHK")} target="_blank">
+        <div className="bg-white text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 transition cursor-pointer">
+          
+          {/* Clickable Image */}
+          <img
+            src="/images/1bhk.jpg"
+            alt="1 BHK"
+            className="h-40 w-full object-cover"
+          />
+
+          <div className="p-4 text-center">
+            <h3 className="font-bold text-lg">1 BHK</h3>
+            <p className="text-sm text-gray-500">Starting from</p>
+            <p className="text-xl font-bold text-primary mb-3">
+              ₹2.34 Lakhs*
+            </p>
+
+            <button className="w-full bg-black text-white py-2 rounded">
+              Get Quote
+            </button>
           </div>
-          <Link to="/designs" className="hidden md:flex items-center gap-2 text-sm font-medium text-primary hover:underline">
-            View All <ArrowRight size={16} />
-          </Link>
-        </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featured.map((design, i) => (
-            <DesignCard key={design.id} design={design} index={i} />
-          ))}
-        </div>
-        <div className="mt-8 text-center md:hidden">
-          <Button variant="outline" asChild>
-            <Link to="/designs">View All Designs</Link>
-          </Button>
-        </div>
-      </section>
 
-      {/* Services */}
+        </div>
+      </a>
+
+      {/* 2 BHK */}
+      <a href={getWhatsAppLink("2 BHK")} target="_blank">
+        <div className="bg-white text-black rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:scale-105 transition cursor-pointer">
+          
+          <img
+            src="/images/2bhk.jpg"
+            alt="2 BHK"
+            className="h-40 w-full object-cover"
+          />
+
+          <div className="p-4 text-center">
+            <h3 className="font-bold text-lg">2 BHK ⭐</h3>
+            <p className="text-sm text-gray-500">Starting from</p>
+            <p className="text-xl font-bold text-primary mb-3">
+              ₹3.59 Lakhs*
+            </p>
+
+            <button className="w-full bg-yellow-400 text-black py-2 rounded font-semibold">
+              Get Quote
+            </button>
+          </div>
+
+        </div>
+      </a>
+
+      {/* 3 BHK */}
+      <a href={getWhatsAppLink("3 BHK")} target="_blank">
+        <div className="bg-white text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 transition cursor-pointer">
+          
+          <img
+            src="/images/3bhk.jpg"
+            alt="3 BHK"
+            className="h-40 w-full object-cover"
+          />
+
+          <div className="p-4 text-center">
+            <h3 className="font-bold text-lg">3 BHK</h3>
+            <p className="text-sm text-gray-500">Starting from</p>
+            <p className="text-xl font-bold text-primary mb-3">
+              ₹4.59 Lakhs*
+            </p>
+
+            <button className="w-full bg-black text-white py-2 rounded">
+              Get Quote
+            </button>
+          </div>
+
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+        
+       {/* Services */}
       <section id="services" className="bg-cream section-padding">
         <div className="max-w-7xl mx-auto">
           <motion.div
