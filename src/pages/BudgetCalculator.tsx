@@ -71,12 +71,14 @@ export default function BudgetCalculator() {
       .join("%0A");
 
     const message =
-      "Hi, I want interior design quotation.%0A%0A" +
+      "Hi Tekis Interiors!🏠 I'd like an interior design estimate for the following areas:%0A%0A" +
       "BHK: " + bhk + "%0A" +
       "Package: " + pkg + "%0A%0A" +
       "Areas:%0A" +
       selectedAreas + "%0A%0A" +
       "Total Area: " + totalSqft + " sq.ft";
+      "(this area and estimate may vary depends on the site condition)%0A%0A"
+      "please share more details and guide me further. Thank you! 🙏";
 
     const phoneNumber = "916301780982"; // 🔴 change if needed
 
