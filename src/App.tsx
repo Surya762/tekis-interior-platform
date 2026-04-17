@@ -16,6 +16,7 @@ import Contact from "./pages/Contact";
 import PanoramPage from "./pages/panoram";
 import NotFound from "./pages/NotFound";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { Analytics } from "@vercel/analytics/react";
 
 
 const queryClient = new QueryClient();
