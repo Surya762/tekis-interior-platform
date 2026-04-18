@@ -6,7 +6,7 @@ import DesignCard from "@/components/DesignCard";
 import { designs } from "@/data/designs";
 import heroImage from "@/assets/hero-living.jpg";
 import Budget from "@/components/BudgetCalculator";
-import images from "@/public/images";
+
 
 const steps = [
   { icon: Palette, title: "Explore Designs", desc: "Browse our portfolio of modular kitchens, commercial interiors, and residential projects." },
@@ -92,7 +92,6 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
   <div>
     {/* Hero */}
 <section className="relative min-h-screen flex items-center justify-center text-white">
-
       
   {/* Background Image */}
   <div className="absolute inset-0">
@@ -127,7 +126,7 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
         </Button>
       </Link>
 
-      <Link to="/Budget">
+      <Link to="/budget-calculator">
         <Button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow hover:bg-yellow-300 transition">
           Budget Calculator
         </Button>
