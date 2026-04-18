@@ -118,15 +118,34 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
 </p>
 
 {/* CTA Buttons */}
-<div className="flex flex-col md:flex-row justify-center gap-3 md:gap-4 mb-8 md:mb-10 px-4 md:px-0">
+<div className="flex flex-col md:flex-row justify-center gap-3 md:gap-5 mt-6">
 
-  <button className="w-full md:w-auto btn-outline">
-    Explore Designs
-  </button>
+  {/* Explore Designs */}
+  <Link to="/designs">
+    <button className="
+      w-full md:w-auto
+      px-4 py-2 text-sm md:px-8 md:py-4 md:text-lg
+      rounded-lg font-semibold
+      bg-gradient-to-r from-yellow-500 to-yellow-600 text-black
+      shadow-lg hover:scale-105 transition
+    ">
+      Explore Designs
+    </button>
+  </Link>
 
-  <button className="w-full md:w-auto btn-primary">
-    Budget Calculator
-  </button>
+  {/* Budget Calculator */}
+  <Link to="/budget-calculator">
+    <button className="
+      w-full md:w-auto
+      px-4 py-2 text-sm md:px-8 md:py-4 md:text-lg
+      rounded-lg font-semibold
+      bg-gradient-to-r from-yellow-500 to-yellow-600 text-black
+      shadow-lg hover:scale-105 transition
+    ">
+      Budget Calculator
+    </button>
+  </Link>
+
 </div>
 
     {/* BHK Cards */}
