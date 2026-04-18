@@ -1,5 +1,7 @@
 import { HashRouter as Router,Routes,Route } from "react-router-dom"
 
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Index from "./pages/Index";
 import Designs from "./pages/Designs";
 import DesignDetail from "./pages/DesignDetail";
