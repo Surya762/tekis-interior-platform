@@ -97,7 +97,7 @@ export default function DesignDetail() {
               <h3 className="font-display text-lg font-semibold text-foreground mb-2">3D Room Preview</h3>
               <p className="text-muted-foreground text-sm mb-4">Interactive 3D visualization coming soon. Book a consultation to see a custom rendering.</p>
               <Button asChild>
-                <Link to="/designs">Book Consultation</Link>
+                <Link to="/Contact">Book Consultation</Link>
               </Button>
             </div>
           </motion.div>
