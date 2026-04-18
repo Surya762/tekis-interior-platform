@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ThreeDView from "./pages/ThreeDView";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/3d-view" element={<ThreeDView />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <WhatsAppFloat />
     </Router>
   );
 }
