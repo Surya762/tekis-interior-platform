@@ -109,30 +109,25 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
   <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
 
     {/* Heading */}
-    <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-      Design Your Dream Home
-    </h1>
+<h1 className="text-3xl md:text-5xl font-bold leading-tight">
+  Design Your Dream Home
+</h1>
 
-    <p className="text-white/90 mb-8 text-lg">
-      Click any design to get instant details on WhatsApp
-    </p>
+<p className="text-white/90 mb-6 text-sm md:text-lg px-2">
+  Click any design to get instant details on WhatsApp
+</p>
 
-    {/* CTA Buttons */}
-    <div className="flex flex-wrap justify-center gap-4 mb-10">
+{/* CTA Buttons */}
+<div className="flex flex-col md:flex-row justify-center gap-3 md:gap-4 mb-8 md:mb-10 px-4 md:px-0">
 
-      <Link to="/designs">
-        <Button className="bg-white text-black px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">
-          Explore Designs
-        </Button>
-      </Link>
+  <button className="w-full md:w-auto btn-outline">
+    Explore Designs
+  </button>
 
-      <Link to="/budget-calculator">
-        <Button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow hover:bg-yellow-300 transition">
-          Budget Calculator
-        </Button>
-      </Link>
-
-    </div>
+  <button className="w-full md:w-auto btn-primary">
+    Budget Calculator
+  </button>
+</div>
 
     {/* BHK Cards */}
     <div className="grid md:grid-cols-3 gap-6">
