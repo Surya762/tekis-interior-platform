@@ -68,24 +68,26 @@ export default function BudgetCalculator() {
         return null;
       })
       .filter(Boolean)
-      .join("%0A");
+      .join("\n");
 
-    const message =
-      "Hi Tekis Interiors!🏠 I'd like an interior design estimate for the following areas:%0A%0A" +
-      "BHK: " + bhk + "%0A" +
-      "Package: " + pkg + "%0A%0A" +
-      "Areas:%0A" +
-      selectedAreas + "%0A%0A" +
-      "Total Area: " + totalSqft + " sq.ft";
-      "(this area and estimate may vary depends on the site condition)%0A%0A" +
-      "please share more details and guide me further. Thank you! 🙏";
+    const message = `Hi Tekis Interiors! 🏠
 
-    const phoneNumber = "916301780982"; // 🔴 change if needed
+I'd like an interior design estimate:
 
-    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+*Home Type:* ${bhk}
+*Package:* ${pkg}
 
-    window.open(url, "_blank");
-  };
+*Selected Areas:*
+${selectedAreas}
+
+*Total Area:* ${totalSqft} sq.ft
+
+Please share more details and guide me further. Thank you!`;
+
+const url = `https://api.whatsapp.com/send?phone=916301780982&text=${encodeURIComponent(message)}`;
+
+window.open(url, "_blank"); 
+    };     
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
