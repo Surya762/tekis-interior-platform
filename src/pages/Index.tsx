@@ -93,6 +93,7 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
     {/* Hero */}
 <section className="relative min-h-screen flex items-center justify-center text-white">
 
+      
   {/* Background Image */}
   <div className="absolute inset-0">
     <img
@@ -126,7 +127,7 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
         </Button>
       </Link>
 
-      <Link to="/budget">
+      <Link to="/Budget">
         <Button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold shadow hover:bg-yellow-300 transition">
           Budget Calculator
         </Button>
