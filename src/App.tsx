@@ -14,6 +14,7 @@ import WhatsAppFloat from "./components/WhatsAppFloat";
 export default function App() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/designs" element={<Designs />} />
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/3d-view" element={<ThreeDView />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
       <WhatsAppFloat />
     </Router>
   );
