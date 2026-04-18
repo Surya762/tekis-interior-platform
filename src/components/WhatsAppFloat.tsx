@@ -3,8 +3,8 @@ import { MessageCircle } from "lucide-react";
 export default function WhatsAppFloat() {
   const phone = "916301780982";
 
-  const message = `Hi Tekis Interior! 🏡
-I'm interested in interior design. Please share more details and guide me further. Thank you!`;
+  const message = `Hi Tekis Interiors! 🏠
+I'd like an interior design estimate. Please share more details.`;
 
   const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
 
