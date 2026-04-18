@@ -2,7 +2,7 @@ export default function WhatsAppFloat() {
   const phone = "916301780982";
 
   const message = `Hi Tekis Interior! 🏡
-I'm interested in interior design. Please share more details.`;
+I'm interested in interior design. Please share more details and guide me further. Thank you!`;
 
   const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
 
