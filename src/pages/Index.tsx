@@ -118,7 +118,7 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
 </p>
 
 {/* CTA Buttons */}
-<div className="flex flex-col md:flex-row justify-center gap-3 md:gap-5 mt-6">
+<div className="flex flex-col md:flex-row justify-center gap-3 md:gap-5 mt-6 mb-8 md:mb-12">
 
   {/* Explore Designs */}
   <Link to="/designs">
