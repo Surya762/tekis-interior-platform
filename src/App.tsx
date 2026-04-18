@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom"
 
 import Index from "./pages/Index";
 import Designs from "./pages/Designs";
@@ -12,7 +12,7 @@ import ThreeDView from "./pages/ThreeDView";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/designs" element={<Designs />} />
@@ -24,6 +24,6 @@ export default function App() {
         <Route path="/3d-view" element={<ThreeDView />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </<Router>
   );
 }
