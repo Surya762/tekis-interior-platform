@@ -24,6 +24,6 @@ export default function App() {
         <Route path="/3d-view" element={<ThreeDView />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </<Router>
+    </Router>
   );
 }
