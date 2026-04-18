@@ -1,3 +1,5 @@
+import { MessageCircle } from "lucide-react";
+
 export default function WhatsAppFloat() {
   const phone = "916301780982";
 
