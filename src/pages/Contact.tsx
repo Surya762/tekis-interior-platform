@@ -54,7 +54,7 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("SUPABASE URL:", SUPABASE_URL);
+    console.log("Form submitted");
     setLoading(true);
   // 🔹 Save to Supabase
   const { error } = await supabase.from("enquiries").insert([
