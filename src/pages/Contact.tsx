@@ -81,17 +81,10 @@ export default function Contact() {
     "_blank"
   );
 
-  // 🔹 Success UI (same as your design)
   setLoading(false);
   setSubmitted(true);
   setForm(defaultForm);
 };
-    // Replace this with your actual API/email submission logic
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      setForm(defaultForm);
-    }, 1200);
   
 
   const isValid = form.name && form.email && form.phone && form.message;
