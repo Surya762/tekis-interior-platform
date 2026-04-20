@@ -87,8 +87,6 @@ Get **instant cost estimation** based on your selection.
 
 ## ⚙️ How to Run Locally
 
-## ⚙️ How to Run Locally
-
 1. Clone repository  
    git clone https://github.com/Surya762/tekis-interiors-platform.git  
 
