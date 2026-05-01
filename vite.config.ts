@@ -5,7 +5,7 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
 
-  base: "/tekis-interiors-platform/",
+  base: "/tekis-interior-platform/",
 
   resolve: {
     alias: {
