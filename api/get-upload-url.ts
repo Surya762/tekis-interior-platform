@@ -11,12 +11,13 @@ const ALLOWED_TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/h
 const MAX_FILE_BYTES = 8 * 1024 * 1024; // 8 MB
 
 const s3 = new S3Client({
-  region: process.env.AWS_REGION,
+  region: process.env.AWS_REGION?.trim(),
   credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID as string,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
+    accessKeyId: (process.env.AWS_ACCESS_KEY_ID as string)?.trim(),
+    secretAccessKey: (process.env.AWS_SECRET_ACCESS_KEY as string)?.trim(),
   },
 });
+
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") {
