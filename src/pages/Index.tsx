@@ -79,137 +79,137 @@ const testimonials = [
 export default function Index() {
   const featured = designs.slice(0, 4);
   const getWhatsAppLink = (bhk: string) => {
-  const msg = `Hi Tekis Interior! 🏠
+    const msg = `Hi Tekis Interior! 🏠
 
 I'm interested in ${bhk} interior design. Please share more details & guide me further. Thank you!`;
 
-  const encodedMsg = encodeURIComponent(msg);
+    const encodedMsg = encodeURIComponent(msg);
 
-  return `https://api.whatsapp.com/send?phone=916301780982&text=${encodedMsg}`;
-};
+    return `https://api.whatsapp.com/send?phone=916301780982&text=${encodedMsg}`;
+  };
 
   return (
-  <div>
-    {/* Hero */}
-<section className="relative min-h-screen flex items-center justify-center text-white">
-      
-  {/* Background Image */}
-  <div className="absolute inset-0">
-    <img
-      src={heroImage}
-      alt="Hero"
-      className="w-full h-full object-cover"
-    />
-  </div>
+    <div>
+      {/* Hero */}
+      <section className="relative min-h-screen flex items-center justify-center text-white">
 
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/40"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Hero"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-  {/* Content */}
-  <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
 
-    {/* Heading */}
-<h1 className="text-3xl md:text-5xl font-bold leading-tight">
-  Design Your Dream Home
-</h1>
+        {/* Content */}
+        <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
 
-<p className="text-white/90 mb-6 text-sm md:text-lg px-2">
-  Click any design to get instant details on WhatsApp
-</p>
+          {/* Heading */}
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+            Design Your Dream Home
+          </h1>
 
-{/* CTA Buttons */}
-<div className="flex flex-col md:flex-row justify-center gap-3 md:gap-5 mt-6 mb-8 md:mb-12">
+          <p className="text-white/90 mb-6 text-sm md:text-lg px-2">
+            Click any design to get instant details on WhatsApp
+          </p>
 
-  {/* Explore Designs */}
-  <Link to="/designs">
-    <button className="
+          {/* CTA Buttons */}
+          <div className="flex flex-col md:flex-row justify-center gap-3 md:gap-5 mt-6 mb-8 md:mb-12">
+
+            {/* Explore Designs */}
+            <Link to="/designs">
+              <button className="
       w-full md:w-auto
       px-4 py-2 text-sm md:px-8 md:py-4 md:text-lg
       rounded-lg font-semibold
       bg-gradient-to-r from-yellow-500 to-yellow-600 text-black
       shadow-lg hover:scale-105 transition
     ">
-      Explore Designs
-    </button>
-  </Link>
+                Explore Designs
+              </button>
+            </Link>
 
-  {/* Budget Calculator */}
-  <Link to="/budget-calculator">
-    <button className="
+            {/* Budget Calculator */}
+            <Link to="/budget-calculator">
+              <button className="
       w-full md:w-auto
       px-4 py-2 text-sm md:px-8 md:py-4 md:text-lg
       rounded-lg font-semibold
       bg-gradient-to-r from-yellow-500 to-yellow-600 text-black
       shadow-lg hover:scale-105 transition
     ">
-      Budget Calculator
-    </button>
-  </Link>
+                Budget Calculator
+              </button>
+            </Link>
 
-</div>
+          </div>
 
-    {/* BHK Cards */}
-    <div className="grid md:grid-cols-3 gap-6">
+          {/* BHK Cards */}
+          <div className="grid md:grid-cols-3 gap-6">
 
-      {/* 1 BHK */}
-      <a href={getWhatsAppLink("1 BHK")} target="_blank" rel="noopener noreferrer">
-        <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
-          
-          <img src="/images/1bhk.jpeg" className="h-44 w-full object-cover" />
+            {/* 1 BHK */}
+            <a href={getWhatsAppLink("1 BHK")} target="_blank" rel="noopener noreferrer">
+              <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
 
-          <div className="p-4 text-center">
-            <h3 className="font-bold text-lg">1 BHK</h3>
-            <p className="text-sm text-gray-500">Starts at @ ₹2.34 Lakhs*</p>
-            <p className="text-xl font-bold text-primary mb-3">₹2.34 Lakhs*</p>
+                <img src="/images/1bhk.jpeg" className="h-44 w-full object-cover" />
 
-            <button className="w-full bg-black text-white py-2 rounded">
-              Get Quote
-            </button>
+                <div className="p-4 text-center">
+                  <h3 className="font-bold text-lg">1 BHK</h3>
+                  <p className="text-sm text-gray-500">Starts at @ ₹2.34 Lakhs*</p>
+                  <p className="text-xl font-bold text-primary mb-3">₹2.34 Lakhs*</p>
+
+                  <button className="w-full bg-black text-white py-2 rounded">
+                    Get Quote
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            {/* 2 BHK */}
+            <a href={getWhatsAppLink("2 BHK")} target="_blank" rel="noopener noreferrer">
+              <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
+
+                <img src="/images/2bhk.jpeg" className="h-44 w-full object-cover" />
+
+                <div className="p-4 text-center">
+                  <h3 className="font-bold text-lg">2 BHK ⭐</h3>
+                  <p className="text-sm text-gray-500">Starts at @ ₹3.59 Lakhs*</p>
+                  <p className="text-xl font-bold text-primary mb-3">₹3.59 Lakhs*</p>
+
+                  <button className="w-full bg-yellow-400 text-black py-2 rounded font-semibold">
+                    Get Quote
+                  </button>
+                </div>
+              </div>
+            </a>
+
+            {/* 3 BHK */}
+            <a href={getWhatsAppLink("3 BHK")} target="_blank" rel="noopener noreferrer">
+              <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
+
+                <img src="/images/3bhk.jpeg" className="h-44 w-full object-cover" />
+
+                <div className="p-4 text-center">
+                  <h3 className="font-bold text-lg">3 BHK</h3>
+                  <p className="text-sm text-gray-500">Starts at @ ₹4.59 Lakhs*</p>
+                  <p className="text-xl font-bold text-primary mb-3">₹4.59 Lakhs*</p>
+
+                  <button className="w-full bg-black text-white py-2 rounded">
+                    Get Quote
+                  </button>
+                </div>
+              </div>
+            </a>
+
           </div>
         </div>
-      </a>
+      </section>
 
-      {/* 2 BHK */}
-      <a href={getWhatsAppLink("2 BHK")} target="_blank" rel="noopener noreferrer">
-        <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg border-2 border-yellow-400 hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
-          
-          <img src="/images/2bhk.jpeg" className="h-44 w-full object-cover" />
-
-          <div className="p-4 text-center">
-            <h3 className="font-bold text-lg">2 BHK ⭐</h3>
-            <p className="text-sm text-gray-500">Starts at @ ₹3.59 Lakhs*</p>
-            <p className="text-xl font-bold text-primary mb-3">₹3.59 Lakhs*</p>
-
-            <button className="w-full bg-yellow-400 text-black py-2 rounded font-semibold">
-              Get Quote
-            </button>
-          </div>
-        </div>
-      </a>
-
-      {/* 3 BHK */}
-      <a href={getWhatsAppLink("3 BHK")} target="_blank" rel="noopener noreferrer">
-        <div className="bg-white/90 backdrop-blur-md text-black rounded-xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
-          
-          <img src="/images/3bhk.jpeg" className="h-44 w-full object-cover" />
-
-          <div className="p-4 text-center">
-            <h3 className="font-bold text-lg">3 BHK</h3>
-            <p className="text-sm text-gray-500">Starts at @ ₹4.59 Lakhs*</p>
-            <p className="text-xl font-bold text-primary mb-3">₹4.59 Lakhs*</p>
-
-            <button className="w-full bg-black text-white py-2 rounded">
-              Get Quote
-            </button>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-  
-     {/* Services */}
+      {/* Services */}
       <section id="services" className="bg-cream section-padding">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -252,7 +252,7 @@ I'm interested in ${bhk} interior design. Please share more details & guide me f
       {/* Specialties */}
       <section className="section-padding max-w-7xl mx-auto">
         <motion.div
-        initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"

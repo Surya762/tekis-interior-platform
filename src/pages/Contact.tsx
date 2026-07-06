@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { uploadToS3 } from "@/lib/uploadToS3";
 
 const WHATSAPP_NUMBER = "916301780982";
 const WHATSAPP_MESSAGE = encodeURIComponent(
@@ -45,6 +46,19 @@ export default function Contact() {
   const [form, setForm] = useState<FormData>(defaultForm);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [photo, setPhoto] = useState<File | null>(null);
+  const [photoError, setPhotoError] = useState<string | null>(null);
+
+  const handlePhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null;
+    setPhotoError(null);
+    if (file && file.size > 8 * 1024 * 1024) {
+      setPhotoError("Photo must be under 8MB");
+      setPhoto(null);
+      return;
+    }
+    setPhoto(file);
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -56,6 +70,20 @@ export default function Contact() {
     e.preventDefault();
     console.log("Form submitted");
     setLoading(true);
+
+  // 🔹 Upload reference photo to S3 first, if attached
+  let photoUrl: string | null = null;
+  if (photo) {
+    try {
+      photoUrl = await uploadToS3(photo);
+    } catch (err) {
+      console.error("Photo upload error:", err);
+      setLoading(false);
+      alert("Failed to upload photo. You can still submit without it.");
+      return;
+    }
+  }
+
   // 🔹 Save to Supabase
   const { error } = await supabase.from("enquiries").insert([
     {
@@ -64,6 +92,7 @@ export default function Contact() {
       phone: form.phone,
       service: form.service,
       message: form.message,
+      photo_url: photoUrl,
     },
   ]);
 
@@ -85,6 +114,7 @@ export default function Contact() {
   setLoading(false);
   setSubmitted(true);
   setForm(defaultForm);
+  setPhoto(null);
 };
   
 
@@ -301,6 +331,15 @@ export default function Contact() {
                   <textarea name="message" value={form.message} onChange={handleChange}
                     placeholder="Tell us about your project — home type, rooms, budget range, timeline..." required rows={5}
                     className="w-full px-4 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:border-amber-400 text-gray-800 placeholder-gray-300 transition-colors resize-none" />
+                </div>
+
+                <div>
+                  <label className="block text-xs text-gray-500 mb-1.5">Reference Photo (optional)</label>
+                  <input type="file" accept="image/jpeg,image/png,image/webp,image/heic" onChange={handlePhotoChange}
+                    className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-medium file:bg-amber-50 file:text-amber-700 hover:file:bg-amber-100 file:cursor-pointer cursor-pointer" />
+                  <p className="text-[11px] text-gray-400 mt-1">Share a photo of the room or space — helps Rajiv give a more accurate estimate. Max 8MB.</p>
+                  {photoError && <p className="text-xs text-red-500 mt-1">{photoError}</p>}
+                  {photo && !photoError && <p className="text-xs text-emerald-600 mt-1">Attached: {photo.name}</p>}
                 </div>
 
                 <button type="submit" disabled={!isValid || loading}
